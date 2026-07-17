@@ -1,0 +1,273 @@
+// Переменные
+$bg-color: #030303;
+$text-primary: #ffffff;
+$text-secondary: #888888;
+$accent-color: #0F3B5E;
+$border-color: #1e1e1e;
+$card-bg: #0a0a0c;
+
+.container {
+  background-color: $bg-color;
+  color: $text-primary;
+  font-family: 'Inter', system-ui, sans-serif;
+  min-height: 100vh;
+  padding: 0 5%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+// Шарики (Bubbles)
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2),
+              0 0 15px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  z-index: 0;
+  backdrop-filter: blur(2px);
+}
+
+// Header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+
+  a {
+    color: $text-secondary;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+
+    &:hover, &.active {
+      color: $text-primary;
+    }
+  }
+}
+
+// Утилиты
+.section {
+  padding: 80px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.sectionSubtitle {
+  color: $text-secondary;
+  max-width: 600px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+
+// Hero
+.hero {
+  padding: 100px 0;
+  position: relative;
+  z-index: 10;
+
+  .heroTitle {
+    font-size: 64px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+  }
+
+  .heroSubtitle {
+    color: $text-secondary;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+}
+
+.ctaButton {
+  background-color: $accent-color;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+// Grid Карточки
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: $card-bg;
+  border: 1px solid $border-color;
+  padding: 2px;
+  cursor: pointer;
+
+  .cardImageWrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .cardNumber {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: $accent-color;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    z-index: 2;
+  }
+
+  .cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+
+  .cardContent {
+    padding: 20px;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: $text-secondary;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  }
+}
+
+// Список Highload
+.list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $border-color;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px 0;
+  border-bottom: 1px solid $border-color;
+  transition: background 0.3s ease;
+
+  .listNumber {
+    color: $text-secondary;
+    font-size: 14px;
+    width: 80px;
+    flex-shrink: 0;
+  }
+
+  .listText {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+
+    h4 {
+      font-weight: 400;
+      font-size: 18px;
+      width: 30%;
+    }
+
+    p {
+      color: $text-secondary;
+      font-size: 14px;
+      line-height: 1.6;
+      width: 60%;
+    }
+  }
+}
+
+// Bottom CTA
+.bottomCta {
+  background: url('../../assets/sq4nzhvsohnjki0pj7qmp6lcnqu0szsx7qvdlgaf_MlfVj9hQ.mp4');
+  border: 1px solid $border-color;
+  padding: 80px 20px;
+  text-align: center;
+  margin: 100px 0;
+  border-radius: 10px;
+
+  h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: $text-secondary;
+    margin-bottom: 40px;
+  }
+
+  button {
+    margin: 0 auto;
+  }
+}
+
+// Footer
+.footer {
+  display: flex;
+    justify-content: space-around;
+  max-width: 1680px;
+  align-items: center;
+  padding: 40px 0;
+  border-top: 1px solid $border-color;
+
+  .contacts {
+    display: flex;
+    gap: 60px;
+
+    span {
+      display: block;
+      color: $text-secondary;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    a, p {
+      color: $text-primary;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  }
+}

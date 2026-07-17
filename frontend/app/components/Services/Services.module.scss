@@ -1,0 +1,117 @@
+
+.servicesSection {
+  color: #ffffff;
+  font-family: 'Source Serif Pro', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: 'Georgia', serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border: 4px solid #1a3250;
+  border-radius: 4px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.leftCard {
+  min-height: 420px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rightCard {
+  flex: 1;
+  min-height: 250px;
+}
+
+.cardNumber {
+  width: 45px;
+  height: 45px;
+  background-color: #ffffff;
+  color: #122135;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Georgia', serif;
+  margin-bottom: 40px;
+}
+
+.cardContent {
+  margin-top: auto;
+}
+
+.cardTitle {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.cardDesc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #8a9bb0; /* Светло-серый/сизый цвет текста */
+  max-width: 90%;
+  margin: 0;
+}
+
+.actionCard {
+  background-color: #113658; /* Сплошной синий фон */
+  border: none;
+  padding: 30px 40px;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 130px;
+
+  .actionTitle {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+
+    span {
+      font-family: sans-serif;
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
+  }
+}

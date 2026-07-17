@@ -1,0 +1,64 @@
+﻿@use "fonts.scss" as *;
+@use "responsive" as *;
+:root {
+  --font-family-main: "Source Serif Pro", "Montserrat", sans-serif;
+  --modal-z-index: 10;
+  --cl-white: #FFFFFF;
+  --cl-background: #030303;
+  --cl-black: #030303;
+  --cl-black-2: #121212;
+  --cl-main: #0F3B5E;
+  --cl-main-dark: #216CA7;
+  --cl-gray-60: rgba(0, 0, 0, 0.6);
+  --cl-gray-80: #414141;
+}
+
+* {
+  font-family: var(--font-family-main);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-main);
+  color: var(--cl-white);
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+}
+
+.appWrapper {
+  min-height: 100vh;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Source Serif Pro", cursive;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--cl-white);
+  line-height: 1.2;
+}
+
+@include responsive(fullscreen) {
+  h2 {
+    font-size: 52px;
+  }
+}
+@include responsive(tablet) {
+  h2 {
+    font-size: 40px;
+  }
+}
+@include responsive(phone) {
+  h2 {
+    font-size: 26px;
+  }
+}

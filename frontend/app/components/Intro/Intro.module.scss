@@ -1,0 +1,138 @@
+@use "../../styles/responsive.scss" as *;
+
+.intro {
+  background-color: var(--cl-background);
+}
+.introWrapper {
+  max-width: 1680px;
+  width: 100%;
+  min-height: 858px;
+  margin: 0 auto;
+  padding: 0 100px 0 150px;
+  padding-top: 205px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow: hidden;
+}
+.title {
+  font-family: 'Source Serif Pro', sans-serif;
+  color: var(--cl-white);
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.content {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: 100%;
+}
+.subtitle {
+  max-width: 666px;
+
+  color: var(--cl-white);
+  font-family: "Anonymous Pro", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.clickMeBtn {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+@include responsive(fullscreen) {
+  .title {
+    font-size: 100px;
+  }
+
+  .introWrapper {
+    min-height: 720px;
+    padding-top: 180px;
+  }
+}
+
+@include responsive(screen) {
+  .title {
+    font-size: 80px;
+  }
+
+  .introWrapper {
+    min-height: 600px;
+    padding-top: 140px;
+  }
+
+  .subtitle {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+}
+
+@include responsive(tablet) {
+  .title {
+    font-size: 56px;
+  }
+
+  .introWrapper {
+    min-height: 520px;
+    padding-top: 110px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .clickMeBtn {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    min-height: 120px;
+  }
+}
+
+@include responsive(phone) {
+  .title {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  .introWrapper {
+    min-height: 420px;
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 24px;
+    padding-bottom: 40px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .clickMeBtn {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+  }
+
+  .subtitle {
+    color: var(--cl-white);
+  }
+}

@@ -1,0 +1,24 @@
+$extra-large-screen: 1600px;
+$large-screen: 1200px;
+$medium-screen: 840px;
+$small-screen: 600px;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == fullscreen {
+    @media (max-width: $extra-large-screen) {
+      @content;
+    }
+  } @else if $breakpoint == screen {
+    @media (max-width: $large-screen) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $medium-screen) {
+      @content;
+    }
+  } @else if $breakpoint == phone {
+    @media (max-width: $small-screen) {
+      @content;
+    }
+  }
+}

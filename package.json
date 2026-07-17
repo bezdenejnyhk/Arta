@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "docker:build": "docker compose -f docker-compose.build.yml build",
+    "docker:push": "docker compose -f docker-compose.build.yml push",
+    "cicd": "docker compose -f docker-compose.build.yml build && docker compose -f docker-compose.build.yml push"
+  }
+}

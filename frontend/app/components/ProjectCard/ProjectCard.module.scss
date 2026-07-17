@@ -1,0 +1,48 @@
+.cardWrapper {
+  position: sticky;
+  margin-bottom: 50px; // Пространство для скролла до следующей карточки
+  height: 60vh;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+  overflow: hidden;
+  background-color: #0c0c0c;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.cardInner {
+  display: flex;
+  height: 100%;
+  padding: 40px;
+  gap: 40px;
+
+  .imageBox {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .infoBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    p {
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+  }
+}

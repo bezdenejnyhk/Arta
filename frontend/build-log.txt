@@ -1,0 +1,387 @@
+
+> build
+> react-router build
+
+[33mThe `envFile` option is deprecated, please use `envDir: false` instead.[39m
+[33mThe `envFile` option is deprecated, please use `envDir: false` instead.[39m
+[33mThe `envFile` option is deprecated, please use `envDir: false` instead.[39m
+Using Vite Environment API (experimental)
+[36mvite v8.1.3 [32mbuilding client environment for production...[36m[39m
+[2Ktransforming...✓ 480 modules transformed.
+[33m[lightningcss minify] 'placeholder' is not recognized as a valid pseudo-class. Did you mean '::placeholder' (pseudo-element) or is this a typo?
+924 |    resize: none;
+925 |  }
+926 |  ._textarea_1fvze_37:placeholder {
+    |                      ^
+927 |    font-family: "Montserrat", sans-serif;
+928 |  }[39m
+rendering chunks...
+computing gzip size...
+build/client/assets/marquee_item-DN4q_jZO.png                                   4.56 kB
+build/client/assets/montserrat-v18-latin_cyrillic-100-CX73XJqF.woff2           26.29 kB
+build/client/assets/montserrat-v18-latin_cyrillic-100italic-Bkc4kg3o.woff2     26.88 kB
+build/client/assets/montserrat-v18-latin_cyrillic-200-CO4ri_pY.woff2           27.17 kB
+build/client/assets/montserrat-v18-latin_cyrillic-300-D-hi5IZ_.woff2           27.17 kB
+build/client/assets/montserrat-v18-latin_cyrillic-900-B3FJi2Z4.woff2           27.47 kB
+build/client/assets/montserrat-v18-latin_cyrillic-regular-BxpCyyKb.woff2       27.54 kB
+build/client/assets/montserrat-v18-latin_cyrillic-500-DltWJA5i.woff2           27.56 kB
+build/client/assets/montserrat-v18-latin_cyrillic-600-Bz2QE8yt.woff2           27.61 kB
+build/client/assets/montserrat-v18-latin_cyrillic-800-Crm_ZpVx.woff2           27.72 kB
+build/client/assets/montserrat-v18-latin_cyrillic-700-HYptFlV7.woff2           27.74 kB
+build/client/assets/montserrat-v18-latin_cyrillic-300italic-oVXkJ4Tk.woff2     27.90 kB
+build/client/assets/montserrat-v18-latin_cyrillic-200italic-CNW1s0T-.woff2     28.00 kB
+build/client/assets/montserrat-v18-latin_cyrillic-600italic-DMIWftJj.woff2     28.35 kB
+build/client/assets/montserrat-v18-latin_cyrillic-500italic-D5OJjsUk.woff2     28.36 kB
+build/client/assets/montserrat-v18-latin_cyrillic-900italic-C4zg0_FV.woff2     28.37 kB
+build/client/assets/montserrat-v18-latin_cyrillic-italic-xU-lfGtr.woff2        28.37 kB
+build/client/assets/montserrat-v18-latin_cyrillic-800italic-CvvEsOSk.woff2     28.38 kB
+build/client/assets/montserrat-v18-latin_cyrillic-700italic-sZMXH1hq.woff2     28.46 kB
+build/client/assets/montserrat-v18-latin_cyrillic-100-t9Ssde7v.eot             31.00 kB
+build/client/assets/montserrat-v18-latin_cyrillic-100italic-WSUAoCcC.eot       31.70 kB
+build/client/assets/montserrat-v18-latin_cyrillic-200-ChgbNrHC.eot             31.83 kB
+build/client/assets/montserrat-v18-latin_cyrillic-300-kF8nwfj5.eot             31.86 kB
+build/client/assets/montserrat-v18-latin_cyrillic-500-DrogdjLi.eot             32.28 kB
+build/client/assets/montserrat-v18-latin_cyrillic-regular-bOQE9FIe.eot         32.30 kB
+build/client/assets/montserrat-v18-latin_cyrillic-600-B3QBM9_g.eot             32.39 kB
+build/client/.vite/manifest.json                                               32.43 kB │ gzip:   3.17 kB
+build/client/assets/montserrat-v18-latin_cyrillic-900-B6UDTbhq.eot             32.44 kB
+build/client/assets/montserrat-v18-latin_cyrillic-800-Dg9GznEk.eot             32.58 kB
+build/client/assets/montserrat-v18-latin_cyrillic-700-esiOwRJH.eot             32.64 kB
+build/client/assets/montserrat-v18-latin_cyrillic-100-BP06_a2R.woff            32.72 kB
+build/client/assets/montserrat-v18-latin_cyrillic-200italic-9Qk0pfjO.eot       32.78 kB
+build/client/assets/montserrat-v18-latin_cyrillic-300italic-CK3C0-KQ.eot       32.82 kB
+build/client/assets/montserrat-v18-latin_cyrillic-italic-BMoSlC82.eot          33.23 kB
+build/client/assets/montserrat-v18-latin_cyrillic-500italic-DBwm7zVB.eot       33.41 kB
+build/client/assets/montserrat-v18-latin_cyrillic-200-ayGnw0g_.woff            33.54 kB
+build/client/assets/montserrat-v18-latin_cyrillic-100italic-CxcGXIWK.woff      33.58 kB
+build/client/assets/montserrat-v18-latin_cyrillic-900italic-B1dPfwts.eot       33.59 kB
+build/client/assets/montserrat-v18-latin_cyrillic-600italic-HGSr3XN3.eot       33.60 kB
+build/client/assets/montserrat-v18-latin_cyrillic-300-BjNVBvp8.woff            33.62 kB
+build/client/assets/montserrat-v18-latin_cyrillic-700italic-Djhqa_3t.eot       33.81 kB
+build/client/assets/montserrat-v18-latin_cyrillic-800italic-BGAYG8C5.eot       33.85 kB
+build/client/assets/montserrat-v18-latin_cyrillic-regular-Cwr7bjOx.woff        33.95 kB
+build/client/assets/montserrat-v18-latin_cyrillic-500-Cb-q_c-R.woff            33.98 kB
+build/client/assets/montserrat-v18-latin_cyrillic-600-P0-zaFaf.woff            34.04 kB
+build/client/assets/montserrat-v18-latin_cyrillic-900-BwhlIDgF.woff            34.15 kB
+build/client/assets/montserrat-v18-latin_cyrillic-700-HiX9eUld.woff            34.22 kB
+build/client/assets/montserrat-v18-latin_cyrillic-800-CcDjKyNZ.woff            34.22 kB
+build/client/assets/montserrat-v18-latin_cyrillic-300italic-Ba6MselE.woff      34.61 kB
+build/client/assets/montserrat-v18-latin_cyrillic-200italic-Bs-5gQ-r.woff      34.62 kB
+build/client/assets/montserrat-v18-latin_cyrillic-italic-BEYdFeFB.woff         34.97 kB
+build/client/assets/montserrat-v18-latin_cyrillic-500italic-Czc_o-9Q.woff      35.05 kB
+build/client/assets/montserrat-v18-latin_cyrillic-600italic-D27WLEhf.woff      35.18 kB
+build/client/assets/montserrat-v18-latin_cyrillic-800italic-UAqmFRKv.woff      35.35 kB
+build/client/assets/montserrat-v18-latin_cyrillic-900italic-BifsiDGY.woff      35.45 kB
+build/client/assets/montserrat-v18-latin_cyrillic-700italic-rRwVW2Ta.woff      35.46 kB
+build/client/assets/montserrat-v18-latin_cyrillic-800-CZsIepVN.svg             53.18 kB │ gzip:  16.49 kB
+build/client/assets/montserrat-v18-latin_cyrillic-900-C3hO751g.svg             53.29 kB │ gzip:  16.61 kB
+build/client/assets/montserrat-v18-latin_cyrillic-700-B6scOXB-.svg             53.49 kB │ gzip:  16.83 kB
+build/client/assets/montserrat-v18-latin_cyrillic-600-NBbYZPcK.svg             53.82 kB │ gzip:  17.04 kB
+build/client/assets/montserrat-v18-latin_cyrillic-500-BBLTRi-M.svg             54.05 kB │ gzip:  16.96 kB
+build/client/assets/montserrat-v18-latin_cyrillic-regular-Cyc0aKTM.svg         54.05 kB │ gzip:  17.10 kB
+build/client/assets/montserrat-v18-latin_cyrillic-100-6RLw9env.svg             54.10 kB │ gzip:  16.70 kB
+build/client/assets/montserrat-v18-latin_cyrillic-200-F6H9lMOc.svg             54.11 kB │ gzip:  16.93 kB
+build/client/assets/montserrat-v18-latin_cyrillic-300-NsGR4Vh3.svg             54.23 kB │ gzip:  17.05 kB
+build/client/assets/montserrat-v18-latin_cyrillic-800italic-C4_p-ikZ.svg       55.18 kB │ gzip:  17.58 kB
+build/client/assets/montserrat-v18-latin_cyrillic-900italic-M87h1xuC.svg       55.33 kB │ gzip:  17.75 kB
+build/client/assets/montserrat-v18-latin_cyrillic-700italic-BsriCS8t.svg       55.67 kB │ gzip:  17.83 kB
+build/client/assets/montserrat-v18-latin_cyrillic-600italic-Dll0WyN-.svg       55.70 kB │ gzip:  17.79 kB
+build/client/assets/montserrat-v18-latin_cyrillic-100italic-B3sNPciR.svg       55.84 kB │ gzip:  17.35 kB
+build/client/assets/montserrat-v18-latin_cyrillic-500italic-DvbVxlOJ.svg       55.88 kB │ gzip:  17.75 kB
+build/client/assets/montserrat-v18-latin_cyrillic-300italic-BHo8RQ0b.svg       55.90 kB │ gzip:  17.85 kB
+build/client/assets/montserrat-v18-latin_cyrillic-200italic-CHHmluBd.svg       55.91 kB │ gzip:  17.67 kB
+build/client/assets/montserrat-v18-latin_cyrillic-italic-CS0e02DS.svg          56.01 kB │ gzip:  17.85 kB
+build/client/assets/ZenDotsKir-BvM1KuOD.ttf                                    66.33 kB
+build/client/assets/montserrat-v18-latin_cyrillic-300-BYMvFygm.ttf             67.42 kB
+build/client/assets/montserrat-v18-latin_cyrillic-500-DjG5FS_3.ttf             68.07 kB
+build/client/assets/montserrat-v18-latin_cyrillic-200-CnC6BZ95.ttf             68.09 kB
+build/client/assets/montserrat-v18-latin_cyrillic-300italic-C-cp7nWY.ttf       68.11 kB
+build/client/assets/montserrat-v18-latin_cyrillic-100-Dv913Os7.ttf             68.36 kB
+build/client/assets/montserrat-v18-latin_cyrillic-regular-CEBJR1K-.ttf         68.40 kB
+build/client/assets/montserrat-v18-latin_cyrillic-100italic-CbdMXEtC.ttf       68.79 kB
+build/client/assets/montserrat-v18-latin_cyrillic-200italic-CVo-hASD.ttf       68.83 kB
+build/client/assets/montserrat-v18-latin_cyrillic-600-CoiiL55q.ttf             68.88 kB
+build/client/assets/montserrat-v18-latin_cyrillic-700-BU0uF_SD.ttf             69.00 kB
+build/client/assets/montserrat-v18-latin_cyrillic-italic-BeAqGdMR.ttf          69.01 kB
+build/client/assets/montserrat-v18-latin_cyrillic-500italic-BPd34yZ7.ttf       69.05 kB
+build/client/assets/montserrat-v18-latin_cyrillic-800-Bi6S9ucu.ttf             69.31 kB
+build/client/assets/montserrat-v18-latin_cyrillic-700italic-DE08QwLY.ttf       69.84 kB
+build/client/assets/montserrat-v18-latin_cyrillic-600italic-BwsSHARF.ttf       69.88 kB
+build/client/assets/montserrat-v18-latin_cyrillic-800italic-CHhxOnfi.ttf       70.18 kB
+build/client/assets/services_3-DvhIw5kC.png                                    72.62 kB
+build/client/assets/montserrat-v18-latin_cyrillic-900-Bi5yN-Lf.ttf             73.66 kB
+build/client/assets/montserrat-v18-latin_cyrillic-900italic-BmLDjzC8.ttf       74.56 kB
+build/client/assets/logo-BJROCDvo.svg                                          95.70 kB │ gzip:  67.51 kB
+build/client/assets/project_3-CgKTz5r0.png                                    124.47 kB
+build/client/assets/project_4-O592IuhV.png                                    148.21 kB
+build/client/assets/home_2-D6UfbO8u.png                                       178.45 kB
+build/client/assets/services_4-Cp2lsC_z.png                                   209.40 kB
+build/client/assets/services_2-DOANMSjg.png                                   217.37 kB
+build/client/assets/home_3-DmPsTWZm.png                                       235.33 kB
+build/client/assets/services_1-CgDmEmnw.png                                   248.60 kB
+build/client/assets/project_2-BBZbCtpk.png                                    358.55 kB
+build/client/assets/click_me_icon-B8FsaJdD.svg                                467.21 kB │ gzip: 346.34 kB
+build/client/assets/hero_bg-cWRtMmEh.png                                      543.22 kB
+build/client/assets/project_1-3XVZZG_o.png                                    609.14 kB
+build/client/assets/footer_bg-4yPFt8KQ.png                                    700.82 kB
+build/client/assets/footer_img-DUasSRiO.png                                   842.88 kB
+build/client/assets/home_1-C0I-ebK5.png                                     1,005.62 kB
+build/client/assets/home_services_bg-C1u7wVis.png                           1,278.58 kB
+build/client/assets/ClickMeBtn-Dl-WOVQ4.css                                     1.50 kB │ gzip:   0.47 kB
+build/client/assets/Intro-BFsderpR.css                                          1.68 kB │ gzip:   0.59 kB
+build/client/assets/BottomSection-B-zWN7T8.css                                  4.05 kB │ gzip:   0.75 kB
+build/client/assets/services-tVfMCAR-.css                                       4.33 kB │ gzip:   1.18 kB
+build/client/assets/portfolio-v7j1M3h0.css                                      8.18 kB │ gzip:   1.92 kB
+build/client/assets/home-KBDH1NtF.css                                          21.30 kB │ gzip:   4.29 kB
+build/client/assets/root-tW5VLI5U.css                                          23.33 kB │ gzip:   4.87 kB
+build/client/assets/Intro-BIQ1Slff.js                                           0.99 kB │ gzip:   0.45 kB
+build/client/assets/BottomSection-Dc3SCc2K.js                                   1.50 kB │ gzip:   0.59 kB
+build/client/assets/react-dom-C1TZrn2q.js                                       3.54 kB │ gzip:   1.34 kB
+build/client/assets/services-BMWOVS0H.js                                        4.65 kB │ gzip:   1.89 kB
+build/client/assets/portfolio-BCxcO0eV.js                                       7.91 kB │ gzip:   2.67 kB
+build/client/assets/home-BuI3IYDe.js                                           12.02 kB │ gzip:   2.99 kB
+build/client/assets/embla-carousel-react.esm-BNQ5nUDw.js                       19.20 kB │ gzip:   7.66 kB
+build/client/assets/root-cV4MigIt.js                                           25.24 kB │ gzip:   8.67 kB
+build/client/assets/jsx-runtime-tr8eSFp5.js                                   129.49 kB │ gzip:  42.78 kB
+build/client/assets/ClickMeBtn-DAUQNSH-.js                                    146.34 kB │ gzip:  49.99 kB
+build/client/assets/entry.client-9ga24oa5.js                                  183.06 kB │ gzip:  58.05 kB
+
+[32m✓ built in 1.71s[39m
+[36mvite v8.1.3 [32mbuilding ssr environment for production...[36m[39m
+[2Ktransforming...✓ 56 modules transformed.
+[33m[lightningcss minify] 'placeholder' is not recognized as a valid pseudo-class. Did you mean '::placeholder' (pseudo-element) or is this a typo?
+1035 |    resize: none;
+1036 |  }
+1037 |  ._textarea_1fvze_37:placeholder {
+     |                      ^
+1038 |    font-family: "Montserrat", sans-serif;
+1039 |  }[39m
+rendering chunks...
+
+[32m✓[39m 110 assets cleaned from React Router server build.
+[2mbuild\client\assets\logo-BJROCDvo.svg[22m
+[2mbuild\client\assets\footer_img-DUasSRiO.png[22m
+[2mbuild\client\assets\click_me_icon-B8FsaJdD.svg[22m
+[2mbuild\client\assets\home_1-C0I-ebK5.png[22m
+[2mbuild\client\assets\home_2-D6UfbO8u.png[22m
+[2mbuild\client\assets\home_3-DmPsTWZm.png[22m
+[2mbuild\client\assets\project_1-3XVZZG_o.png[22m
+[2mbuild\client\assets\project_2-BBZbCtpk.png[22m
+[2mbuild\client\assets\project_3-CgKTz5r0.png[22m
+[2mbuild\client\assets\project_4-O592IuhV.png[22m
+[2mbuild\client\assets\services_1-CgDmEmnw.png[22m
+[2mbuild\client\assets\services_2-DOANMSjg.png[22m
+[2mbuild\client\assets\services_3-DvhIw5kC.png[22m
+[2mbuild\client\assets\services_4-Cp2lsC_z.png[22m
+[2mbuild\client\assets\ZenDotsKir-BvM1KuOD.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-100-t9Ssde7v.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-100-CX73XJqF.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-100-BP06_a2R.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-100-Dv913Os7.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-100-6RLw9env.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-200-ChgbNrHC.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-200-CO4ri_pY.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-200-ayGnw0g_.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-200-CnC6BZ95.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-200-F6H9lMOc.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-100italic-WSUAoCcC.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-100italic-Bkc4kg3o.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-100italic-CxcGXIWK.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-100italic-CbdMXEtC.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-100italic-B3sNPciR.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-200italic-9Qk0pfjO.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-200italic-CNW1s0T-.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-200italic-Bs-5gQ-r.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-200italic-CVo-hASD.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-200italic-CHHmluBd.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-300-kF8nwfj5.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-300-D-hi5IZ_.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-300-BjNVBvp8.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-300-BYMvFygm.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-300-NsGR4Vh3.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-300italic-CK3C0-KQ.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-300italic-oVXkJ4Tk.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-300italic-Ba6MselE.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-300italic-C-cp7nWY.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-300italic-BHo8RQ0b.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-regular-bOQE9FIe.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-regular-BxpCyyKb.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-regular-Cwr7bjOx.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-regular-CEBJR1K-.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-regular-Cyc0aKTM.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-italic-BMoSlC82.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-italic-xU-lfGtr.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-italic-BEYdFeFB.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-italic-BeAqGdMR.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-italic-CS0e02DS.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-500-DrogdjLi.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-500-DltWJA5i.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-500-Cb-q_c-R.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-500-DjG5FS_3.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-500-BBLTRi-M.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-500italic-DBwm7zVB.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-500italic-D5OJjsUk.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-500italic-Czc_o-9Q.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-500italic-BPd34yZ7.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-500italic-DvbVxlOJ.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-600-B3QBM9_g.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-600-Bz2QE8yt.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-600-P0-zaFaf.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-600-CoiiL55q.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-600-NBbYZPcK.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-600italic-HGSr3XN3.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-600italic-DMIWftJj.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-600italic-D27WLEhf.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-600italic-BwsSHARF.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-600italic-Dll0WyN-.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-700-esiOwRJH.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-700-HYptFlV7.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-700-HiX9eUld.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-700-BU0uF_SD.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-700-B6scOXB-.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-700italic-Djhqa_3t.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-700italic-sZMXH1hq.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-700italic-rRwVW2Ta.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-700italic-DE08QwLY.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-700italic-BsriCS8t.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-800-Dg9GznEk.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-800-Crm_ZpVx.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-800-CcDjKyNZ.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-800-Bi6S9ucu.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-800-CZsIepVN.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-900-B6UDTbhq.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-900-B3FJi2Z4.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-900-BwhlIDgF.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-900-Bi5yN-Lf.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-900-C3hO751g.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-800italic-BGAYG8C5.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-800italic-CvvEsOSk.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-800italic-UAqmFRKv.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-800italic-CHhxOnfi.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-800italic-C4_p-ikZ.svg[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-900italic-B1dPfwts.eot[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-900italic-C4zg0_FV.woff2[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-900italic-BifsiDGY.woff[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-900italic-BmLDjzC8.ttf[22m
+[2mbuild\client\assets\montserrat-v18-latin_cyrillic-900italic-M87h1xuC.svg[22m
+[2mbuild\client\assets\home_services_bg-C1u7wVis.png[22m
+[2mbuild\client\assets\marquee_item-DN4q_jZO.png[22m
+[2mbuild\client\assets\hero_bg-cWRtMmEh.png[22m
+[2mbuild\client\assets\footer_bg-4yPFt8KQ.png[22m
+[2mbuild\server\assets\server-build-Wa6TTGee.css[22m
+
+computing gzip size...
+build/server/assets/marquee_item-DN4q_jZO.png                                   4.56 kB
+build/server/assets/montserrat-v18-latin_cyrillic-100-CX73XJqF.woff2           26.29 kB
+build/server/assets/montserrat-v18-latin_cyrillic-100italic-Bkc4kg3o.woff2     26.88 kB
+build/server/assets/montserrat-v18-latin_cyrillic-200-CO4ri_pY.woff2           27.17 kB
+build/server/assets/montserrat-v18-latin_cyrillic-300-D-hi5IZ_.woff2           27.17 kB
+build/server/assets/montserrat-v18-latin_cyrillic-900-B3FJi2Z4.woff2           27.47 kB
+build/server/assets/montserrat-v18-latin_cyrillic-regular-BxpCyyKb.woff2       27.54 kB
+build/server/assets/montserrat-v18-latin_cyrillic-500-DltWJA5i.woff2           27.56 kB
+build/server/assets/montserrat-v18-latin_cyrillic-600-Bz2QE8yt.woff2           27.61 kB
+build/server/assets/montserrat-v18-latin_cyrillic-800-Crm_ZpVx.woff2           27.72 kB
+build/server/assets/montserrat-v18-latin_cyrillic-700-HYptFlV7.woff2           27.74 kB
+build/server/assets/montserrat-v18-latin_cyrillic-300italic-oVXkJ4Tk.woff2     27.90 kB
+build/server/assets/montserrat-v18-latin_cyrillic-200italic-CNW1s0T-.woff2     28.00 kB
+build/server/assets/montserrat-v18-latin_cyrillic-600italic-DMIWftJj.woff2     28.35 kB
+build/server/assets/montserrat-v18-latin_cyrillic-500italic-D5OJjsUk.woff2     28.36 kB
+build/server/assets/montserrat-v18-latin_cyrillic-900italic-C4zg0_FV.woff2     28.37 kB
+build/server/assets/montserrat-v18-latin_cyrillic-italic-xU-lfGtr.woff2        28.37 kB
+build/server/assets/montserrat-v18-latin_cyrillic-800italic-CvvEsOSk.woff2     28.38 kB
+build/server/assets/montserrat-v18-latin_cyrillic-700italic-sZMXH1hq.woff2     28.46 kB
+build/server/.vite/manifest.json                                               28.85 kB │ gzip:   2.63 kB
+build/server/assets/montserrat-v18-latin_cyrillic-100-t9Ssde7v.eot             31.00 kB
+build/server/assets/montserrat-v18-latin_cyrillic-100italic-WSUAoCcC.eot       31.70 kB
+build/server/assets/montserrat-v18-latin_cyrillic-200-ChgbNrHC.eot             31.83 kB
+build/server/assets/montserrat-v18-latin_cyrillic-300-kF8nwfj5.eot             31.86 kB
+build/server/assets/montserrat-v18-latin_cyrillic-500-DrogdjLi.eot             32.28 kB
+build/server/assets/montserrat-v18-latin_cyrillic-regular-bOQE9FIe.eot         32.30 kB
+build/server/assets/montserrat-v18-latin_cyrillic-600-B3QBM9_g.eot             32.39 kB
+build/server/assets/montserrat-v18-latin_cyrillic-900-B6UDTbhq.eot             32.44 kB
+build/server/assets/montserrat-v18-latin_cyrillic-800-Dg9GznEk.eot             32.58 kB
+build/server/assets/montserrat-v18-latin_cyrillic-700-esiOwRJH.eot             32.64 kB
+build/server/assets/montserrat-v18-latin_cyrillic-100-BP06_a2R.woff            32.72 kB
+build/server/assets/montserrat-v18-latin_cyrillic-200italic-9Qk0pfjO.eot       32.78 kB
+build/server/assets/montserrat-v18-latin_cyrillic-300italic-CK3C0-KQ.eot       32.82 kB
+build/server/assets/montserrat-v18-latin_cyrillic-italic-BMoSlC82.eot          33.23 kB
+build/server/assets/montserrat-v18-latin_cyrillic-500italic-DBwm7zVB.eot       33.41 kB
+build/server/assets/montserrat-v18-latin_cyrillic-200-ayGnw0g_.woff            33.54 kB
+build/server/assets/montserrat-v18-latin_cyrillic-100italic-CxcGXIWK.woff      33.58 kB
+build/server/assets/montserrat-v18-latin_cyrillic-900italic-B1dPfwts.eot       33.59 kB
+build/server/assets/montserrat-v18-latin_cyrillic-600italic-HGSr3XN3.eot       33.60 kB
+build/server/assets/montserrat-v18-latin_cyrillic-300-BjNVBvp8.woff            33.62 kB
+build/server/assets/montserrat-v18-latin_cyrillic-700italic-Djhqa_3t.eot       33.81 kB
+build/server/assets/montserrat-v18-latin_cyrillic-800italic-BGAYG8C5.eot       33.85 kB
+build/server/assets/montserrat-v18-latin_cyrillic-regular-Cwr7bjOx.woff        33.95 kB
+build/server/assets/montserrat-v18-latin_cyrillic-500-Cb-q_c-R.woff            33.98 kB
+build/server/assets/montserrat-v18-latin_cyrillic-600-P0-zaFaf.woff            34.04 kB
+build/server/assets/montserrat-v18-latin_cyrillic-900-BwhlIDgF.woff            34.15 kB
+build/server/assets/montserrat-v18-latin_cyrillic-700-HiX9eUld.woff            34.22 kB
+build/server/assets/montserrat-v18-latin_cyrillic-800-CcDjKyNZ.woff            34.22 kB
+build/server/assets/montserrat-v18-latin_cyrillic-300italic-Ba6MselE.woff      34.61 kB
+build/server/assets/montserrat-v18-latin_cyrillic-200italic-Bs-5gQ-r.woff      34.62 kB
+build/server/assets/montserrat-v18-latin_cyrillic-italic-BEYdFeFB.woff         34.97 kB
+build/server/assets/montserrat-v18-latin_cyrillic-500italic-Czc_o-9Q.woff      35.05 kB
+build/server/assets/montserrat-v18-latin_cyrillic-600italic-D27WLEhf.woff      35.18 kB
+build/server/assets/montserrat-v18-latin_cyrillic-800italic-UAqmFRKv.woff      35.35 kB
+build/server/assets/montserrat-v18-latin_cyrillic-900italic-BifsiDGY.woff      35.45 kB
+build/server/assets/montserrat-v18-latin_cyrillic-700italic-rRwVW2Ta.woff      35.46 kB
+build/server/assets/montserrat-v18-latin_cyrillic-800-CZsIepVN.svg             53.18 kB │ gzip:  16.49 kB
+build/server/assets/montserrat-v18-latin_cyrillic-900-C3hO751g.svg             53.29 kB │ gzip:  16.61 kB
+build/server/assets/montserrat-v18-latin_cyrillic-700-B6scOXB-.svg             53.49 kB │ gzip:  16.83 kB
+build/server/assets/montserrat-v18-latin_cyrillic-600-NBbYZPcK.svg             53.82 kB │ gzip:  17.04 kB
+build/server/assets/montserrat-v18-latin_cyrillic-500-BBLTRi-M.svg             54.05 kB │ gzip:  16.96 kB
+build/server/assets/montserrat-v18-latin_cyrillic-regular-Cyc0aKTM.svg         54.05 kB │ gzip:  17.10 kB
+build/server/assets/montserrat-v18-latin_cyrillic-100-6RLw9env.svg             54.10 kB │ gzip:  16.70 kB
+build/server/assets/montserrat-v18-latin_cyrillic-200-F6H9lMOc.svg             54.11 kB │ gzip:  16.93 kB
+build/server/assets/montserrat-v18-latin_cyrillic-300-NsGR4Vh3.svg             54.23 kB │ gzip:  17.05 kB
+build/server/assets/montserrat-v18-latin_cyrillic-800italic-C4_p-ikZ.svg       55.18 kB │ gzip:  17.58 kB
+build/server/assets/montserrat-v18-latin_cyrillic-900italic-M87h1xuC.svg       55.33 kB │ gzip:  17.75 kB
+build/server/assets/montserrat-v18-latin_cyrillic-700italic-BsriCS8t.svg       55.67 kB │ gzip:  17.83 kB
+build/server/assets/montserrat-v18-latin_cyrillic-600italic-Dll0WyN-.svg       55.70 kB │ gzip:  17.79 kB
+build/server/assets/montserrat-v18-latin_cyrillic-100italic-B3sNPciR.svg       55.84 kB │ gzip:  17.35 kB
+build/server/assets/montserrat-v18-latin_cyrillic-500italic-DvbVxlOJ.svg       55.88 kB │ gzip:  17.75 kB
+build/server/assets/montserrat-v18-latin_cyrillic-300italic-BHo8RQ0b.svg       55.90 kB │ gzip:  17.85 kB
+build/server/assets/montserrat-v18-latin_cyrillic-200italic-CHHmluBd.svg       55.91 kB │ gzip:  17.67 kB
+build/server/assets/montserrat-v18-latin_cyrillic-italic-CS0e02DS.svg          56.01 kB │ gzip:  17.85 kB
+build/server/assets/ZenDotsKir-BvM1KuOD.ttf                                    66.33 kB
+build/server/assets/montserrat-v18-latin_cyrillic-300-BYMvFygm.ttf             67.42 kB
+build/server/assets/montserrat-v18-latin_cyrillic-500-DjG5FS_3.ttf             68.07 kB
+build/server/assets/montserrat-v18-latin_cyrillic-200-CnC6BZ95.ttf             68.09 kB
+build/server/assets/montserrat-v18-latin_cyrillic-300italic-C-cp7nWY.ttf       68.11 kB
+build/server/assets/montserrat-v18-latin_cyrillic-100-Dv913Os7.ttf             68.36 kB
+build/server/assets/montserrat-v18-latin_cyrillic-regular-CEBJR1K-.ttf         68.40 kB
+build/server/assets/montserrat-v18-latin_cyrillic-100italic-CbdMXEtC.ttf       68.79 kB
+build/server/assets/montserrat-v18-latin_cyrillic-200italic-CVo-hASD.ttf       68.83 kB
+build/server/assets/montserrat-v18-latin_cyrillic-600-CoiiL55q.ttf             68.88 kB
+build/server/assets/montserrat-v18-latin_cyrillic-700-BU0uF_SD.ttf             69.00 kB
+build/server/assets/montserrat-v18-latin_cyrillic-italic-BeAqGdMR.ttf          69.01 kB
+build/server/assets/montserrat-v18-latin_cyrillic-500italic-BPd34yZ7.ttf       69.05 kB
+build/server/assets/montserrat-v18-latin_cyrillic-800-Bi6S9ucu.ttf             69.31 kB
+build/server/assets/montserrat-v18-latin_cyrillic-700italic-DE08QwLY.ttf       69.84 kB
+build/server/assets/montserrat-v18-latin_cyrillic-600italic-BwsSHARF.ttf       69.88 kB
+build/server/assets/montserrat-v18-latin_cyrillic-800italic-CHhxOnfi.ttf       70.18 kB
+build/server/assets/services_3-DvhIw5kC.png                                    72.62 kB
+build/server/assets/montserrat-v18-latin_cyrillic-900-Bi5yN-Lf.ttf             73.66 kB
+build/server/assets/montserrat-v18-latin_cyrillic-900italic-BmLDjzC8.ttf       74.56 kB
+build/server/assets/logo-BJROCDvo.svg                                          95.70 kB │ gzip:  67.51 kB
+build/server/assets/project_3-CgKTz5r0.png                                    124.47 kB
+build/server/assets/project_4-O592IuhV.png                                    148.21 kB
+build/server/assets/home_2-D6UfbO8u.png                                       178.45 kB
+build/server/assets/services_4-Cp2lsC_z.png                                   209.40 kB
+build/server/assets/services_2-DOANMSjg.png                                   217.37 kB
+build/server/assets/home_3-DmPsTWZm.png                                       235.33 kB
+build/server/assets/services_1-CgDmEmnw.png                                   248.60 kB
+build/server/assets/project_2-BBZbCtpk.png                                    358.55 kB
+build/server/assets/click_me_icon-B8FsaJdD.svg                                467.21 kB │ gzip: 346.34 kB
+build/server/assets/hero_bg-cWRtMmEh.png                                      543.22 kB
+build/server/assets/project_1-3XVZZG_o.png                                    609.14 kB
+build/server/assets/footer_bg-4yPFt8KQ.png                                    700.82 kB
+build/server/assets/footer_img-DUasSRiO.png                                   842.88 kB
+build/server/assets/home_1-C0I-ebK5.png                                     1,005.62 kB
+build/server/assets/home_services_bg-C1u7wVis.png                           1,278.58 kB
+build/server/assets/server-build-Wa6TTGee.css                                  64.39 kB │ gzip:  11.42 kB
+build/server/index.js                                                         117.24 kB │ gzip:  28.39 kB
+
+[32m✓ built in 751ms[39m

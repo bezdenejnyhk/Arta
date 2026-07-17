@@ -1,0 +1,77 @@
+@use "../../styles/responsive.scss" as *;
+
+.button {
+  border-radius: 20px;
+  background: var(--cl-main);
+  white-space: nowrap;
+  color: var(--cl-background);
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.6px;
+  padding: 12px 38px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+@media (hover: hover) {
+  .button:hover {
+    background: var(--cl-main-dark);
+    color: var(--cl-background);
+  }
+}
+
+.button.lg {
+  padding: 34px 100px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  gap: 45px;
+
+  svg {
+    width: 32px;
+  }
+}
+
+@include responsive(screen) {
+  .button.lg {
+    padding: 26px 72px;
+    font-size: 18px;
+  }
+}
+
+@include responsive(tablet) {
+  .button.lg {
+    padding: 20px 48px;
+    font-size: 16px;
+    gap: 24px;
+    border-radius: 40px;
+  }
+
+  .button.lg svg {
+    width: 24px;
+  }
+}
+
+@include responsive(phone) {
+  .button.lg {
+    padding: 16px 32px;
+    font-size: 14px;
+    gap: 16px;
+  }
+
+  .button.lg svg {
+    width: 20px;
+  }
+}

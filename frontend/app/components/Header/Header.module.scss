@@ -1,0 +1,325 @@
+@use "../../styles/responsive" as *;
+
+// ─────────────────────────────────────────
+// Desktop Header
+// ─────────────────────────────────────────
+.header {
+  padding: 20px;
+  width: 100%;
+  background: var(--cl-background);
+}
+
+.headerWrapper {
+  position: relative;
+  z-index: 100;
+  max-width: 1680px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.logo {
+  min-width: 100px;
+  width: 100px;
+}
+.nav {
+  max-width: 620px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.link {
+  font-family: "Anonymous Pro", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  padding: 6px 0;
+
+  &:hover {
+    color: var(--cl-main);
+  }
+}
+
+.activeLink {
+  color: var(--cl-main);
+  text-decoration: solid underline var(--cl-main) 2px;
+
+  &:hover {
+    color: var(--cl-main);
+  }
+}
+
+.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.ctaDesktop {
+  text-decoration: none;
+}
+
+// ─────────────────────────────────────────
+// Burger Button
+// ─────────────────────────────────────────
+.burger {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+
+  &:focus-visible {
+    outline: 2px solid var(--cl-main);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+.burgerLine {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+// ─────────────────────────────────────────
+// Backdrop
+// ─────────────────────────────────────────
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 300;
+  background: rgba(0, 0, 0, 0.65);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+// ─────────────────────────────────────────
+// Mobile Slide-in Menu
+// ─────────────────────────────────────────
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 400;
+  width: 360px;
+  max-width: 85vw;
+  background: var(--cl-background);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 28px 40px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-shadow: -8px 0 32px rgba(0, 0, 0, 0.4);
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mobileMenuTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: end;
+  padding: 22px 0 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.mobileMenuTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.mobileClose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--cl-main);
+    outline-offset: 2px;
+  }
+}
+
+.mobileNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 16px 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.mobileLink {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  -webkit-transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+  display: block;
+
+  &:hover {
+    color: #fff;
+    padding-left: 6px;
+  }
+}
+
+.mobileLinkActive {
+  color: var(--cl-main);
+
+  &:hover {
+    color: var(--cl-main);
+  }
+}
+
+.mobileFooter {
+  padding-top: 28px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.mobileCta {
+  display: block;
+  text-decoration: none;
+}
+
+// ─────────────────────────────────────────
+// Responsive
+// ─────────────────────────────────────────
+@include responsive(tablet) {
+  .nav,
+  .ctaDesktop {
+    display: none;
+  }
+
+  .logo {
+    min-width: 70px;
+    width: 70px;
+  }
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@include responsive(phone) {
+  .header {
+    padding: 16px 20px;
+  }
+
+  .mobileMenu {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 20px 32px;
+  }
+
+  .mobileLink {
+    font-size: 24px;
+    padding: 18px 0;
+  }
+}

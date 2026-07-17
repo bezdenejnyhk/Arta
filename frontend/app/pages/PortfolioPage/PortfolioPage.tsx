@@ -1,0 +1,302 @@
+import React, { useState } from 'react';
+import { motion, type Variants } from 'framer-motion';
+import styles from './PortfolioPage.module.scss';
+import Bubble from '../../components/Bubble/Bubble';
+import projectBuildova from "../../assets/images/project_1.png";
+import projectTarot from "../../assets/images/project_2.png";
+import projectCrypto from "../../assets/images/project_3.png";
+import projectConsulting from "../../assets/images/project_4.png";
+
+import bubbleImg from '../../assets/bubble.png';
+import { useLang } from '~/hooks/useLang';
+import useEmblaCarousel from 'embla-carousel-react';
+import { useContactModal } from '~/hooks/useContactModal';
+import { Button } from '~/components/Button/Button';
+
+const textAnimation = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+} as const satisfies Variants;
+
+const PROJECT_IMAGES = [projectBuildova, projectTarot, projectCrypto, projectConsulting];
+
+export function PortfolioPage(){
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    containScroll: "trimSnaps",
+    dragFree: false,
+    loop: false,
+    slidesToScroll: 1,
+  });
+     const { content } = useLang();
+  const portfolioContent = content.pages.portfolio.content;
+  const projects = portfolioContent.projects.map((project, index) => ({
+    ...project,
+    id: index + 1,
+    image: PROJECT_IMAGES[index],
+  }));
+  const reviews = portfolioContent.reviews.items;
+      const [mobileOpen, setMobileOpen] = useState(false);
+      const { openModal } = useContactModal();
+  return (
+    <div className={styles.page}>
+      {/* Фон с плавающими шариками */}
+      <div className={styles.bubblesBackground}>
+        <Bubble src={bubbleImg} size={300} top="8%" left="33%" duration={6} />
+        <Bubble src={bubbleImg} size={80} top="0%" left="80%" duration={8} />
+        <Bubble src={bubbleImg} size={300} top="6%" left="73%" duration={6} />
+        <Bubble src={bubbleImg} size={120} top="5%" left="90%" duration={5} />
+        <Bubble src={bubbleImg} size={400} top="12%" left="80%" duration={5} />
+        <Bubble src={bubbleImg} size={200} top="69%" left="10%" duration={10} />
+        <Bubble src={bubbleImg} size={500} top="60%" left="-10%" duration={10} />
+        <Bubble src={bubbleImg} size={100} top="80%" left="75%" duration={7} />
+        <Bubble src={bubbleImg} size={500} top="5%" left="-10%" duration={7} />
+        <Bubble src={bubbleImg} size={400} top="40%" left="95%" duration={7} />
+        <Bubble src={bubbleImg} size={300} top="500%" left="55%" duration={7} />
+      </div>
+
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <motion.div 
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true, margin: "-100px" }}
+          variants={textAnimation}
+        >
+          <h1 className={styles.title}>ПОРТФОЛИО</h1>
+          <p className={styles.subtitle}>
+            Реальные примеры разработки сайтов, приложений и CRM-систем.<br/>
+            Результаты автоматизации и роста бизнеса.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Projects Section */}
+      {/* <section className={styles.projectsSection}>
+        <motion.h2 
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true }}
+          variants={textAnimation}
+        >
+          Наши недавние проекты
+        </motion.h2>
+        
+        <div className={styles.projectsStack}>
+          <ProjectCard 
+            title="Строительная фирма"
+            image={project1Img}
+            description="Сайт строительной компании. Запуск рекламной кампании, адаптивный дизайн для B2B-сегмента."
+            index={0}
+          />
+          <ProjectCard 
+            title="Гадания на таро"
+            image={project2Img}
+            description="Сайт-сервис «ZORNIK». Разработка структуры и акцентов на телефоне, внедрение платежей."
+            index={1}
+          />
+          <ProjectCard 
+            title="Криптобиржа"
+            image={project2Img}
+            description="Проект: Корпоративный сайт Finorbis Задача: Создать многостраничный сайт для 5 клиентских сегментов с акцентом на регуляторный статус, техническую документацию и юридическую чистоту.Решение: Разработка структуры из 30+ страниц, интеграция риск-дисклеймеров, API-документация, полный юридический блок (Privacy, Cookie, Disclaimer)
+Результат: Рост входящих заявок на 35%, повышение качества лидов, соответствие требованиям VQF/FINMA, единый тон коммуникации по всем страницам."
+            index={1}
+          />
+          <ProjectCard 
+            title="Гадания на таро"
+            image={project2Img}
+            description={}
+            index={1}
+          />
+        </div>
+      </section> */}
+         <motion.section
+         id="portfolio"
+         className={styles.portfolio}
+         initial={{ opacity: 0, y: 30 }}
+         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+       >
+         <div className={styles.portfolioWrapper}>
+           <div className={styles.portfolioHeader}>
+             <h2 className={styles.portfolioTitle}>
+               {portfolioContent.heading.titleLines[0]}
+               <br /> {portfolioContent.heading.titleLines[1]}
+             </h2>
+             <p className={styles.portfolioSubtitle}>{portfolioContent.heading.subtitle}</p>
+          </div>
+
+          <div className={styles.projectsGrid}>
+            {projects.map((project, i) => (
+              <motion.div
+                key={project.id}
+                className={`${styles.projectCard} ${i % 2 === 0 ? styles.even : styles.odd}`}
+                 initial={{ opacity: 0, y: 24 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true, amount: 0.2 }}
+                 transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                 whileHover={{ boxShadow: "0 18px 45px rgba(18, 18, 18, 0.24)" }}
+               >
+                 <div
+                   className={`${styles.projectContent} ${i % 2 !== 0 && styles.projectContentText}`}
+                 >
+                   <h3 className={styles.projectTitle}>
+                     <span>{project.title}</span>
+                     <svg
+                       xmlns="http://www.w3.org/2000/svg"
+                       width="30"
+                       height="30"
+                       className={styles.arrow}
+                       viewBox="0 0 30 30"
+                       fill="none"
+                     >
+                       <path
+                         fillRule="evenodd"
+                         clipRule="evenodd"
+                         d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                         fill="#121212"
+                       />
+                     </svg>
+                   </h3>
+                   <p className={styles.projectDescription}>{project.description}</p>
+                 </div>
+                 <div className={styles.projectContent}>
+                   <img src={project.image} alt={project.title} className={styles.projectImage} />
+                 </div>
+               </motion.div>
+             ))}
+           </div>
+         </div>
+</motion.section>
+
+      {/* Testimonials Section */}
+      <motion.section
+      id="reviews"
+       className={styles.reviews}
+       initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <motion.h2 
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true }}
+          variants={textAnimation}
+        >
+          Отзывы наших клиентов
+        </motion.h2>
+        <section>
+        <div className={styles.topReviewWrapper}>
+             <div className={styles.topReview}>
+             <p className={styles.topReviewTitle}>
+                <svg 
+                  width="38"
+                  height="28"
+                  viewBox="0 0 38 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.9602 0.560115C15.2802 0.160115 13.3602 0.000112534 11.5202 0.000112534C3.60023 0.000112534 0.000234544 3.68011 0.000234544 9.84011V27.6001H15.6802V11.6801H8.72023V10.2401C8.72023 8.24012 9.44023 7.76011 12.2402 7.76011C13.2802 7.76011 14.4802 7.92012 15.8402 8.08011L16.9602 0.560115ZM37.6802 0.560115C36.0802 0.160115 34.1602 0.000112534 32.3202 0.000112534C24.4002 0.000112534 20.8002 3.68011 20.8002 9.84011V27.6001H36.4002V11.6801H29.5202V10.2401C29.5202 8.24012 30.2402 7.76011 32.9602 7.76011C34.0802 7.76011 35.2802 7.92012 36.6402 8.08011L37.6802 0.560115Z"
+                    fill="white"
+                  />
+                </svg>
+
+                <span>{portfolioContent.reviews.topReview.title}</span>
+              </p>
+
+              <p className={styles.topReviewText}>{portfolioContent.reviews.topReview.text}</p>
+
+              <div className={styles.topReviewAuthor}>
+                <div className={styles.topReviewImage}></div>
+                <div>
+                  <p className={styles.topReviewName}>
+                    {portfolioContent.reviews.topReview.author}
+                  </p>
+                  <p className={styles.topReviewDate}>{portfolioContent.reviews.topReview.date}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div className={styles.reviewCarouselViewport} ref={emblaRef}>
+            <div
+              className={styles.reviewCarousel}
+              aria-label={portfolioContent.reviews.carouselAriaLabel}
+              role="list"
+            >
+              {reviews.map((review) => (
+                
+                <div key={review.id} className={styles.reviewSlide} role="listitem">
+                  <div className={styles.reviewCard}>
+                    <span className={styles.reviewRating}>{review.rating}</span>
+
+                    <div>
+                      <p className={styles.reviewText}>{review.text}</p>
+
+                      <div>
+                        <p className={styles.reviewName}>{review.author}</p>
+                        <p className={styles.reviewDate}>{review.date}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+      </section>
+      </motion.section>
+
+      {/* CTA Section */}
+      <section className={styles.cta}>
+        <motion.div 
+          className={styles.ctaCard}
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true }}
+          variants={textAnimation}
+        >
+          <h2>Нужно решение под Вашу задачу?</h2>
+          <p>Оставьте заявку и мы предложим стратегию разработки уже сегодня.</p>
+          <motion.div
+            whileHover={{ scale: 1.03, y: -4 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Button
+                theme="white"
+                className={styles.mobileCta}
+                onClick={() => {
+                  setMobileOpen(false);
+                  openModal();
+                }}
+              >
+                Стать клиентом
+              </Button>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* Footer */}
+       <footer className={styles.footer}>
+        <div className={styles.logo}>APTA</div>
+        <div className={styles.contacts}>
+          <div>
+            <span>Email</span>
+            <a href="mailto:info@aptasystem">info@apta.system</a>
+          </div>
+          <div>
+            <span>Наш офис</span>
+            <p>Москва, Россия</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+
+
+
