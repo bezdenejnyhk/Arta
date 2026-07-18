@@ -1,0 +1,200 @@
+.bubblesLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  top: var(--bubble-top);
+  left: var(--bubble-left);
+  width: var(--bubble-size);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  opacity: 0.42;
+  filter: saturate(1.14) contrast(1.04);
+  animation:
+    bubbleDrift var(--drift-duration) ease-in-out infinite alternate,
+    bubbleSway 19s ease-in-out infinite alternate;
+  animation-delay: var(--phase), 0s;
+  will-change: transform;
+}
+
+.bubbleImage,
+.bubbleBurst {
+  position: absolute;
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+.bubbleImage {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.74;
+  mix-blend-mode: screen;
+  filter:
+    brightness(1.1)
+    contrast(1.18)
+    saturate(1.16)
+    drop-shadow(0 0 11px rgba(205, 244, 255, 0.1));
+  animation:
+    bubbleBreath 11s ease-in-out infinite alternate,
+    bubbleLife var(--cycle-duration) linear infinite;
+  animation-delay: 0s, var(--phase);
+}
+
+.bubbleBurst {
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  opacity: 0;
+  mix-blend-mode: screen;
+  filter:
+    brightness(1.28)
+    contrast(1.08)
+    saturate(1.32)
+    drop-shadow(0 0 12px rgba(255, 255, 255, 0.12));
+  animation: bubbleBurst var(--cycle-duration) linear infinite;
+  animation-delay: var(--phase);
+}
+
+.bubbleLarge {
+  opacity: 0.96;
+}
+
+.bubbleSmall {
+  opacity: 0.93;
+}
+
+.bubbleTiny {
+  opacity: 0.9;
+}
+
+.bubbleSoft {
+  opacity: 0.9;
+  filter: blur(0.25px) saturate(1.08);
+}
+
+@keyframes bubbleDrift {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translate(var(--drift-x), 0) rotate(4deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translate(0, var(--drift-y)) rotate(-2deg);
+  }
+}
+
+@keyframes bubbleSway {
+  0% {
+    border-radius: 49% 51% 50% 50%;
+  }
+
+  100% {
+    border-radius: 53% 47% 45% 55%;
+  }
+}
+
+@keyframes bubbleBreath {
+  0% {
+    transform: scale(0.98) rotate(-3deg);
+    filter:
+      brightness(1.02)
+      contrast(1.12)
+      saturate(1.05)
+      drop-shadow(0 0 8px rgba(205, 244, 255, 0.08));
+  }
+
+  100% {
+    transform: scale(1.04) rotate(5deg);
+    filter:
+      brightness(1.18)
+      contrast(1.22)
+      saturate(1.25)
+      drop-shadow(0 0 13px rgba(205, 244, 255, 0.12));
+  }
+}
+
+@keyframes bubbleLife {
+  0%,
+  76% {
+    opacity: 0.74;
+    transform: scale(1);
+  }
+
+  78% {
+    opacity: 0.88;
+    transform: scale(1.04);
+  }
+
+  79.2%,
+  88% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+
+  92% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+
+  97%,
+  100% {
+    opacity: 0.74;
+    transform: scale(1);
+  }
+}
+
+@keyframes bubbleBurst {
+  0%,
+  77.8%,
+  83%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.72) rotate(-8deg);
+  }
+
+  79.1% {
+    opacity: 0.64;
+    transform: translate(-50%, -50%) scale(1) rotate(2deg);
+  }
+
+  81.4% {
+    opacity: 0.14;
+    transform: translate(-50%, -50%) scale(1.1) rotate(9deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .bubble {
+    opacity: 0.31;
+  }
+
+  .bubble:nth-child(4),
+  .bubble:nth-child(6) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubble,
+  .bubbleImage,
+  .bubbleBurst {
+    animation: none;
+  }
+
+  .bubbleBurst {
+    display: none;
+  }
+}

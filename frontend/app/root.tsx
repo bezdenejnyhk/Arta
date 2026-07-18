@@ -18,6 +18,7 @@ import "./styles/responsive.scss";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { ModalForm } from "./components/ModalForm/ModalForm";
+import { BackgroundBubbles } from "./components/BackgroundBubbles/BackgroundBubbles";
 import { ContactModalProvider, useContactModal } from "./hooks/useContactModal";
 
 export const links: Route.LinksFunction = () => [
@@ -80,6 +81,7 @@ function AppContent() {
 
   return (
     <div className="appWrapper">
+      <BackgroundBubbles />
       <Header />
       <AnimatePresence mode="wait" initial={false}>
         <Outlet />

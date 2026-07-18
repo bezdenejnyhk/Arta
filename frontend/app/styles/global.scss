@@ -11,6 +11,8 @@
   --cl-main-dark: #216CA7;
   --cl-gray-60: rgba(0, 0, 0, 0.6);
   --cl-gray-80: #414141;
+  --site-max-width: 1224px;
+  --site-padding: clamp(24px, 7.8vw, 112px);
 }
 
 * {
@@ -25,6 +27,7 @@ body {
   font-family: var(--font-family-main);
   color: var(--cl-white);
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 a {
@@ -32,7 +35,10 @@ a {
 }
 
 .appWrapper {
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 h2 {
