@@ -4,15 +4,19 @@
 // Desktop Header
 // ─────────────────────────────────────────
 .header {
-  padding: 20px;
-  width: 100%;
-  background: var(--cl-background);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 120;
+  width: min(calc(100% - 48px), var(--site-max-width));
+  padding: 42px 0 0;
+  background: transparent;
+  transform: translateX(-50%);
 }
 
 .headerWrapper {
   position: relative;
   z-index: 100;
-  max-width: 1680px;
   width: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -24,17 +28,17 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 40px;
+  gap: 56px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .logo {
-  min-width: 100px;
-  width: 100px;
+  min-width: 124px;
+  width: 124px;
 }
 .nav {
-  max-width: 620px;
+  max-width: 560px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,10 +50,10 @@
 
 .link {
   font-family: "Anonymous Pro", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 1;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.42em;
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
@@ -297,8 +301,8 @@
   }
 
   .logo {
-    min-width: 70px;
-    width: 70px;
+    min-width: 92px;
+    width: 92px;
   }
   .burger {
     display: -webkit-box;
@@ -309,7 +313,8 @@
 
 @include responsive(phone) {
   .header {
-    padding: 16px 20px;
+    width: calc(100% - 40px);
+    padding: 22px 0 0;
   }
 
   .mobileMenu {

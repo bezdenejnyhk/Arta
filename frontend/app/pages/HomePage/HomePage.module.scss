@@ -5,6 +5,17 @@
   background-color: var(--cl-background);
 }
 
+// .pageStage {
+//     position: relative;
+//     min-height: 100svh;
+//     overflow: hidden;
+// }
+
+// .pageContent {
+//     position: relative;
+//     z-index: 2;
+// }
+
 .hero {
   position: relative;
   width: 100%;
@@ -85,15 +96,16 @@
 .statsSection {
   position: relative;
   background: var(--cl-background);
-  padding-top: 107px;
+  padding-top: 88px;
 }
 
 
 
 .about {
-  max-width: 1680px;
+  width: min(calc(100% - 48px), var(--site-max-width));
+  max-width: var(--site-max-width);
   margin: 0 auto;
-  padding: 0 100px 0 150px;
+  padding: 0;
 }
 
 .aboutTitle {
@@ -104,7 +116,7 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: var(--cl-white);
-  max-width: 800px;
+  max-width: 720px;
   width: 100%;
 }
 
@@ -126,28 +138,29 @@
 }
 
 .container {
-  max-width: 1680px;
-  width: 100%;
-  padding-left: 150px;
+  max-width: var(--site-max-width);
+  width: min(calc(100% - 48px), var(--site-max-width));
+  margin: 0 auto;
+  padding: 0;
   display: grid;
-  height: 875px;
-  background-size: contain;
+  min-height: 710px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: min(100%, 1130px) auto;
   background-image: url('../../assets/images/Group\ 1000000752.png');
 
   @include responsive(fullscreen) {
-    padding: 0 100px;
     gap: 60px;
   }
 
   @include responsive(screen) {
-    padding: 0 60px;
     gap: 50px;
   }
 
   @include responsive(tablet) {
     grid-template-columns: 1fr;
     gap: 50px;
-    padding: 0 40px;
+    padding: 0 var(--site-padding);
   }
 
   @include responsive(phone) {
@@ -161,7 +174,10 @@
   padding-top: 8px;
   display: flex;
   justify-content: flex-end;
-  padding-right: 100px;
+  max-width: var(--site-max-width);
+  width: min(calc(100% - 48px), var(--site-max-width));
+  margin: 0 auto;
+  padding-right: 0;
 
   @include responsive(tablet) {
     padding-top: 0;
@@ -175,9 +191,8 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 40px;
-  max-width: 580px;
   margin: 0;
-    max-width: 910px;
+  max-width: 720px;
   width: 100%;
 
   @include responsive(screen) {
@@ -201,7 +216,8 @@
 .itemsGrid {
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  justify-content: space-between;
+  gap: 56px;
   align-items: center;
 
   @include responsive(tablet) {
@@ -380,11 +396,11 @@
   position: relative;
   overflow: hidden;
   background: var(--cl-background);
-  padding: 0 150px 0 100px;
+  padding: 0 var(--site-padding);
 }
 
 .servicesInner {
-  max-width: 1643px;
+  max-width: var(--site-max-width);
   margin: 0 auto;
 }
 
@@ -527,9 +543,9 @@
 }
 
 .marqueeInner {
-  max-width: 1643px;
+  max-width: var(--site-max-width);
   margin: 0 auto;
-  padding: 0 160px;
+  padding: 0;
   box-sizing: border-box;
 
 }
@@ -1998,8 +2014,10 @@
 
 .footer {
   display: flex;
-  justify-content: space-around;
-  max-width: 1680px;
+  justify-content: space-between;
+  width: min(calc(100% - 48px), var(--site-max-width));
+  max-width: var(--site-max-width);
+  margin: 0 auto;
   align-items: center;
   padding: 40px 0;
   border-top: 1px solid #1e1e1e;

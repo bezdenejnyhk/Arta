@@ -1,138 +1,137 @@
 @use "../../styles/responsive.scss" as *;
 
 .intro {
+  position: relative;
+  overflow: hidden;
   background-color: var(--cl-background);
 }
+
 .introWrapper {
-  max-width: 1680px;
-  width: 100%;
-  min-height: 858px;
+  position: relative;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 1fr);
+  align-items: center;
+  gap: clamp(48px, 7vw, 112px);
+  width: min(calc(100% - 48px), var(--site-max-width));
+  max-width: var(--site-max-width);
+  min-height: 760px;
   margin: 0 auto;
-  padding: 0 100px 0 150px;
-  padding-top: 205px;
+  padding: 154px 0 104px;
+}
+
+.copy {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  overflow: hidden;
+  align-items: flex-start;
+  min-width: 0;
 }
+
 .title {
-  font-family: 'Source Serif Pro', sans-serif;
+  margin: 0;
   color: var(--cl-white);
-  font-size: 96px;
+  font-family: "Source Serif Pro", serif;
+  font-size: clamp(64px, 6.7vw, 96px);
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 0.95;
+  letter-spacing: 0.08em;
 }
-.content {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  width: 100%;
-}
-.subtitle {
-  max-width: 666px;
 
+.content {
+  width: 100%;
+  margin-top: 34px;
+}
+
+.subtitle {
+  max-width: 520px;
+  margin: 0;
   color: var(--cl-white);
   font-family: "Anonymous Pro", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 1.65;
 }
 
-.clickMeBtn {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+.mobileCta {
+  margin-top: 34px;
+}
+
+.videoWrap {
+  position: relative;
+  justify-self: end;
+  width: min(100%, 600px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.74;
+  mix-blend-mode: screen;
+  filter: contrast(1.08) brightness(0.95);
 }
 
 @include responsive(fullscreen) {
-  .title {
-    font-size: 100px;
-  }
-
   .introWrapper {
     min-height: 720px;
-    padding-top: 180px;
   }
 }
 
 @include responsive(screen) {
-  .title {
-    font-size: 80px;
-  }
-
   .introWrapper {
-    min-height: 600px;
-    padding-top: 140px;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+    gap: 48px;
+    min-height: 660px;
   }
 
   .subtitle {
-    font-size: 26px;
-    line-height: 1.4;
+    font-size: 15px;
   }
 }
 
 @include responsive(tablet) {
-  .title {
-    font-size: 56px;
-  }
-
   .introWrapper {
-    min-height: 520px;
-    padding-top: 110px;
+    grid-template-columns: 1fr;
+    width: 100%;
+    min-height: auto;
+    padding: 130px var(--site-padding) 72px;
   }
 
-  .subtitle {
-    font-size: 20px;
-    line-height: 1.4;
-  }
-
-  .clickMeBtn {
-    width: 120px;
-    height: 120px;
-    min-width: 120px;
-    min-height: 120px;
+  .videoWrap {
+    order: -1;
+    justify-self: center;
+    width: min(78vw, 420px);
+    margin-bottom: 4px;
   }
 }
 
 @include responsive(phone) {
-  .title {
-    font-size: 38px;
-    line-height: 1.1;
+  .introWrapper {
+    padding: 112px 20px 56px;
+    gap: 28px;
   }
 
-  .introWrapper {
-    min-height: 420px;
-    padding-top: 80px;
-    padding-bottom: 0;
+  .title {
+    font-size: 46px;
   }
 
   .content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    gap: 24px;
-    padding-bottom: 40px;
+    margin-top: 24px;
   }
 
   .subtitle {
-    font-size: 16px;
-    line-height: 1.5;
     max-width: 100%;
+    font-size: 14px;
+    line-height: 1.55;
   }
 
-  .clickMeBtn {
-    width: 100px;
-    height: 100px;
-    min-width: 100px;
-    min-height: 100px;
-  }
-
-  .subtitle {
-    color: var(--cl-white);
+  .mobileCta {
+    margin-top: 28px;
   }
 }

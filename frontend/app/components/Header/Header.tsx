@@ -16,9 +16,9 @@ export function Header() {
   const { openModal } = useContactModal();
 
   const mainNavLinks = [
+    { label: nav.services, path: "/services" },
     { label: nav.home, path: "/" },
     { label: nav.portfolio, path: "/portfolio" },
-    { label: nav.services, path: "/services" },
   ];
 
   // Close mobile menu on resize
@@ -50,6 +50,7 @@ export function Header() {
               <NavLink
                 key={path}
                 to={buildHref(path)}
+                end={path === "/"}
                 className={({ isActive }) =>
                   [styles.link, isActive ? styles.activeLink : ""].filter(Boolean).join(" ")
                 }

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, type Variants } from 'framer-motion';
+import { useRef, useState, type CSSProperties } from 'react';
+import { motion, useScroll, useTransform, type MotionValue, type Variants } from 'framer-motion';
 import styles from './PortfolioPage.module.scss';
 import Bubble from '../../components/Bubble/Bubble';
 import projectBuildova from "../../assets/images/project_1.png";
@@ -9,7 +9,6 @@ import projectConsulting from "../../assets/images/project_4.png";
 
 import bubbleImg from '../../assets/bubble.png';
 import { useLang } from '~/hooks/useLang';
-import useEmblaCarousel from 'embla-carousel-react';
 import { useContactModal } from '~/hooks/useContactModal';
 import { Button } from '~/components/Button/Button';
 
@@ -20,13 +19,75 @@ const textAnimation = {
 
 const PROJECT_IMAGES = [projectBuildova, projectTarot, projectCrypto, projectConsulting];
 
+type ReviewDeckStyle = CSSProperties & {
+  "--review-scroll-height": string;
+};
+
+type ReviewItem = {
+  id: number;
+  rating: string;
+  text: string;
+  author: string;
+  date: string;
+};
+
+function ReviewDealCard({
+  review,
+  index,
+  total,
+  scrollYProgress,
+}: {
+  review: ReviewItem;
+  index: number;
+  total: number;
+  scrollYProgress: MotionValue<number>;
+}) {
+  const segment = 1 / Math.max(total, 1);
+  const start = index * segment;
+  const hold = Math.min(start + segment * 0.38, 0.94);
+  const end = Math.min(start + segment * 0.92, 1);
+  const gone = Math.min(end + 0.08, 1);
+  const baseRotate = (index - (total - 1) / 2) * 2.2;
+  const baseY = (index - (total - 1) / 2) * 7;
+
+  const x = useTransform(scrollYProgress, [start, hold, end], ["0vw", "0vw", "88vw"]);
+  const y = useTransform(scrollYProgress, [start, hold, end], [baseY, baseY - 8, baseY + 34]);
+  const rotate = useTransform(scrollYProgress, [start, hold, end], [baseRotate, baseRotate, 24 + index * 4]);
+  const scale = useTransform(scrollYProgress, [start, hold, end], [1, 1, 0.94]);
+  const opacity = useTransform(scrollYProgress, [start, end, gone], [1, 1, 0]);
+
+  return (
+    <motion.div
+      className={styles.reviewDealCard}
+      role="listitem"
+      style={{
+        x,
+        y,
+        rotate,
+        scale,
+        opacity,
+        zIndex: total - index,
+      }}
+    >
+      <span className={styles.reviewRating}>{review.rating}</span>
+
+      <div>
+        <p className={styles.reviewText}>{review.text}</p>
+
+        <div>
+          <p className={styles.reviewName}>{review.author}</p>
+          <p className={styles.reviewDate}>{review.date}</p>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 export function PortfolioPage(){
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "start",
-    containScroll: "trimSnaps",
-    dragFree: false,
-    loop: false,
-    slidesToScroll: 1,
+  const reviewsDeckRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: reviewsDeckRef,
+    offset: ["start start", "end end"],
   });
      const { content } = useLang();
   const portfolioContent = content.pages.portfolio.content;
@@ -36,6 +97,7 @@ export function PortfolioPage(){
     image: PROJECT_IMAGES[index],
   }));
   const reviews = portfolioContent.reviews.items;
+  const reviewsScrollHeight = `${Math.max(reviews.length * 84, 180)}vh`;
       const [mobileOpen, setMobileOpen] = useState(false);
       const { openModal } = useContactModal();
   return (
@@ -174,8 +236,8 @@ export function PortfolioPage(){
       <motion.section
       id="reviews"
        className={styles.reviews}
-       initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+       initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
       >
@@ -222,31 +284,27 @@ export function PortfolioPage(){
           </div>
 
 
-          <div className={styles.reviewCarouselViewport} ref={emblaRef}>
+          <section
+            className={styles.reviewDealSection}
+            ref={reviewsDeckRef}
+            style={{ "--review-scroll-height": reviewsScrollHeight } as ReviewDeckStyle}
+          >
             <div
-              className={styles.reviewCarousel}
+              className={styles.reviewDealStage}
               aria-label={portfolioContent.reviews.carouselAriaLabel}
               role="list"
             >
-              {reviews.map((review) => (
-                
-                <div key={review.id} className={styles.reviewSlide} role="listitem">
-                  <div className={styles.reviewCard}>
-                    <span className={styles.reviewRating}>{review.rating}</span>
-
-                    <div>
-                      <p className={styles.reviewText}>{review.text}</p>
-
-                      <div>
-                        <p className={styles.reviewName}>{review.author}</p>
-                        <p className={styles.reviewDate}>{review.date}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              {reviews.map((review, index) => (
+                <ReviewDealCard
+                  key={review.id}
+                  review={review}
+                  index={index}
+                  total={reviews.length}
+                  scrollYProgress={scrollYProgress}
+                />
               ))}
             </div>
-          </div>
+          </section>
       </section>
       </motion.section>
 

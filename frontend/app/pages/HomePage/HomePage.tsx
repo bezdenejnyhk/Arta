@@ -7,9 +7,11 @@ import { BottomSection } from "~/components/BottomSection/BottomSection";
 import { useContactModal } from "~/hooks/useContactModal";
 import { useRef, useState } from "react";
 import Services from "~/components/Services/Services";
-import marqueImg from '../../assets/images/image 986.png'
+import marqueImg from '../../assets/images/rtut.png'
+import waterRtutImg from '../../assets/images/waterRtut.png'
 import Expertise from "~/components/Expertise/Expertise";
 import { Button } from "~/components/Button/Button";
+import { LiquidPlanet } from "~/components/Rtut/LiquidPlanet";
  
 function MarqueeRow({ reverse = false }: { reverse?: boolean }) {
   return (
@@ -154,7 +156,8 @@ export function HomePage() {
               <h2 id="marquee-title" className={styles.marqueeText}>
                 {home.marquee.text}
               </h2>
-              <img src={marqueImg} alt="img" className={styles.marqueeImg}/>
+              <LiquidPlanet />
+              {/* <img src={marqueImg} alt="img" className={styles.marqueeImg}/> */}
               <button type="button" className={styles.marqueeCta} onClick={openModal}>
                 {home.marquee.cta}
               </button>
@@ -186,7 +189,9 @@ export function HomePage() {
           whileInView="visible" 
           viewport={{ once: true }}
           variants={textAnimation}
+          // style={{"zIndex": 1}}
         >
+          
           <h2>Нужно решение под Вашу задачу?</h2>
           <p>Оставьте заявку и мы предложим стратегию разработки уже сегодня.</p>
           <motion.div

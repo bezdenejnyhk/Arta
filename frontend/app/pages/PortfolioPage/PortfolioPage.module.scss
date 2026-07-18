@@ -6,18 +6,18 @@
 }
 
 .portfolioWrapper {
-  max-width: 1680px;
+  width: min(calc(100% - 48px), var(--site-max-width));
+  max-width: var(--site-max-width);
   margin: 200px auto;
-  padding: 0 20px;
+  padding: 0;
 }
 .portfolioHeader {
   display: flex;
   align-items: end;
   justify-content: space-between;
-  max-width: 1680px;
+  max-width: var(--site-max-width);
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
   padding-top: 130px;
   padding-bottom: 60px;
 }
@@ -40,8 +40,8 @@
 }
 
 .projectsGrid {
-  max-width: 1456px;
-  margin-left: auto;
+  width: 100%;
+  margin: 0 auto;
   border-top: 1px solid #d0d0d0;
 }
 .projectContent {
@@ -81,7 +81,7 @@
 
 .projectCard {
   display: grid;
-  grid-template-columns: 600px 1fr;
+  grid-template-columns: minmax(360px, 0.72fr) minmax(0, 1fr);
   position: relative;
   transition: background-color 0.2s ease;
 
@@ -115,12 +115,13 @@
 
 .reviews {
   background-size: 100% 100%;
-  padding: 0 20px;
-  padding-left: 150px;
+  width: min(calc(100% - 48px), var(--site-max-width));
+  margin: 0 auto;
+  padding: 0;
 }
 
 .reviewsWrapper {
-  max-width: 1680px;
+  max-width: var(--site-max-width);
   width: 100%;
   margin: 0 auto;
 }
@@ -183,8 +184,8 @@
   border-left: 1px solid #383838;
   padding-top: 100px;
   padding-left: 67px;
-  max-width: 1140px;
-  margin-left: auto;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .topReviewTitle {
@@ -253,6 +254,45 @@
 
 .reviewCarouselViewport {
   overflow: hidden;
+}
+
+.reviewDealSection {
+  position: relative;
+  height: var(--review-scroll-height);
+  min-height: 110vh;
+}
+
+.reviewDealStage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-height: 560px;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+  perspective: 1200px;
+  list-style: none;
+}
+
+.reviewDealCard {
+  position: absolute;
+  width: min(100%, 560px);
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background:
+    linear-gradient(145deg, rgba(30, 30, 30, 0.96), rgba(9, 9, 9, 0.98)),
+    #1e1e1e;
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transform-origin: 78% 54%;
+  user-select: none;
+  will-change: transform, opacity;
 }
 
 .reviewCarousel {
@@ -343,8 +383,6 @@
     gap: 24px;
     padding-top: 80px;
     padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   .portfolioSubtitle {
@@ -359,11 +397,15 @@
   }
 
   .projectsGrid {
-    margin-left: 0;
+    margin: 0 auto;
   }
 
   .reviewSlide {
     flex: 0 0 calc((100% - 1.5 * 24px) / 2.5);
+  }
+
+  .reviewDealCard {
+    width: min(100%, 500px);
   }
 
   .reviews {
@@ -449,8 +491,6 @@
   .reviews {
     padding-top: 100px;
     padding-bottom: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   .topReview {
@@ -498,6 +538,18 @@
     flex: 0 0 calc((100% - 1.5 * 24px) / 2.5);
   }
 
+  .reviewDealStage {
+    top: 0;
+    height: 100vh;
+    min-height: 480px;
+  }
+
+  .reviewDealCard {
+    width: min(100%, 460px);
+    min-height: 330px;
+    padding: 30px;
+  }
+
   .reviewCard {
     padding: 28px;
   }
@@ -527,7 +579,7 @@
   }
 
   .projectsGrid {
-    margin-left: 0;
+    margin: 0 auto;
   }
 
   .projectTitle {
@@ -545,8 +597,7 @@
   .reviews {
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: calc(100% - 40px);
   }
 
   .reviewsTitle {
@@ -609,6 +660,22 @@
     flex: 0 0 calc((100% - 24px) / 1.5);
   }
 
+  .reviewDealSection {
+    min-height: 100vh;
+  }
+
+  .reviewDealStage {
+    top: 0;
+    height: 100vh;
+    min-height: 420px;
+  }
+
+  .reviewDealCard {
+    width: 100%;
+    min-height: 300px;
+    padding: 24px;
+  }
+
   .reviewCard {
     padding: 24px;
     gap: 20px;
@@ -649,7 +716,7 @@
   background-color: #050505;
   color: #ffffff;
   font-family: 'Arial', sans-serif; // Замените на нужный шрифт
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
 }
 
@@ -702,10 +769,12 @@
 
 .hero {
   height: 60vh;
+  width: min(calc(100% - 48px), var(--site-max-width));
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 10%;
+  padding: 0;
   position: relative;
   z-index: 10;
 
@@ -726,7 +795,9 @@
 
 // Контейнер для проектов
 .projectsSection {
-  padding: 50px 10%;
+  width: min(calc(100% - 48px), var(--site-max-width));
+  margin: 0 auto;
+  padding: 50px 0;
   position: relative;
   z-index: 10;
 
@@ -743,7 +814,9 @@
 }
 
 .testimonials {
-  padding: 100px 10%;
+  width: min(calc(100% - 48px), var(--site-max-width));
+  margin: 0 auto;
+  padding: 100px 0;
   position: relative;
   z-index: 10;
 
@@ -804,7 +877,10 @@
 }
 
 .cta {
-  padding: 100px 10%;
+  width: min(calc(100% - 48px), var(--site-max-width));
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  padding: 100px 0;
   position: relative;
   z-index: 10;
 
@@ -845,8 +921,10 @@
 
 .footer {
   display: flex;
-    justify-content: space-around;
-  max-width: 1680px;
+  justify-content: space-between;
+  width: min(calc(100% - 48px), var(--site-max-width));
+  max-width: var(--site-max-width);
+  margin: 0 auto;
   align-items: center;
   padding: 40px 0;
   border-top: 1px solid #1e1e1e;
