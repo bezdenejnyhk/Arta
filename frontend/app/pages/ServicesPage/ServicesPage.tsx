@@ -1,5 +1,5 @@
 import React, { useState, type ReactNode } from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import styles from './ServicesPage.module.scss';
 import { useContactModal } from '~/hooks/useContactModal';
 import { Button } from '~/components/Button/Button';
@@ -10,6 +10,7 @@ import img4 from '../../assets/images/services_4.png'
 import img5 from '../../assets/images/services_5.png'
 import Bubble from '~/components/Bubble/Bubble';
 import bubbleImg from '../../assets/bubble.png'
+import video from '../../assets/videoCTA.mp4'
 
 interface BubbleProps {
   size: number;
@@ -24,6 +25,11 @@ interface FadeInScrollProps {
   delay?: number;
   className?: string;
 }
+
+const textAnimation = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+} as const satisfies Variants;
 
 // Компонент для плавающих шариков
 const FloatingBubble: React.FC<BubbleProps> = ({ size, top, left, delay, duration }: {size: number, top: string, left: string, delay: number, duration: number}) => (
@@ -174,10 +180,38 @@ export function ServicesPage() {
 
       {/* Bottom CTA */}
       <FadeInScroll>
-        <section className={styles.bottomCta}>
-          <h2>Нужно решение<br/>под Вашу задачу?</h2>
-          <p>Оставьте заявку и мы предложим стратегию разработки для вашего бизнеса</p>
-          <Button
+      <section className={styles.cta}>
+         <motion.div
+          className={styles.ctaVideo}
+    initial={{ opacity: 0, scale: 0.96 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.9, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <video
+            className={styles.video}
+            src={video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+        </motion.div>
+        <motion.div 
+          className={styles.ctaCard}
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true }}
+          variants={textAnimation}
+        >
+          
+          <h2>Нужно решение под Вашу задачу?</h2>
+          <p>Оставьте заявку и мы предложим стратегию разработки уже сегодня.</p>
+          <motion.div
+            whileHover={{ scale: 1.03, y: -4 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Button
                 theme="white"
                 className={styles.mobileCta}
                 onClick={() => {
@@ -187,7 +221,9 @@ export function ServicesPage() {
               >
                 Стать клиентом
               </Button>
-        </section>
+          </motion.div>
+        </motion.div>
+      </section>
       </FadeInScroll>
 
       {/* Footer */}
