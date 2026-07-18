@@ -1,17 +1,15 @@
 import { motion, type Variants } from "framer-motion";
 import styles from "./HomePage.module.scss";
-import industryArrow from "../../assets/icons/arrow.svg";
 import { Intro } from "~/components/Intro/Intro";
 import { useLang } from "~/hooks/useLang";
 import { BottomSection } from "~/components/BottomSection/BottomSection";
 import { useContactModal } from "~/hooks/useContactModal";
 import { useRef, useState } from "react";
 import Services from "~/components/Services/Services";
-import marqueImg from '../../assets/images/rtut.png'
-import waterRtutImg from '../../assets/images/waterRtut.png'
 import Expertise from "~/components/Expertise/Expertise";
 import { Button } from "~/components/Button/Button";
 import { LiquidPlanet } from "~/components/Rtut/LiquidPlanet";
+import video from '../../assets/videoCTA.mp4'
  
 function MarqueeRow({ reverse = false }: { reverse?: boolean }) {
   return (
@@ -183,13 +181,28 @@ export function HomePage() {
       />
 
       <section className={styles.cta}>
+         <motion.div
+          className={styles.ctaVideo}
+    initial={{ opacity: 0, scale: 0.96 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.9, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <video
+            className={styles.video}
+            src={video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+        </motion.div>
         <motion.div 
           className={styles.ctaCard}
           initial="hidden" 
           whileInView="visible" 
           viewport={{ once: true }}
           variants={textAnimation}
-          // style={{"zIndex": 1}}
         >
           
           <h2>Нужно решение под Вашу задачу?</h2>

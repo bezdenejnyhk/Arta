@@ -116,7 +116,7 @@
 .reviews {
   background-size: 100% 100%;
   width: min(calc(100% - 48px), var(--site-max-width));
-  margin: 0 auto;
+  margin: 200px auto;
   padding: 0;
 }
 
@@ -731,42 +731,6 @@
   overflow: hidden;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 50px;
-  position: relative;
-  z-index: 10;
-
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
-  }
-
-  .nav {
-    display: flex;
-    gap: 30px;
-
-    a {
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-      font-size: 14px;
-      text-transform: uppercase;
-      transition: color 0.3s ease;
-
-      &:hover, &.active {
-        color: #fff;
-      }
-      
-      &.active {
-        color: #4a90e2; // Синий акцент как на макете
-      }
-    }
-  }
-}
-
 .hero {
   height: 60vh;
   width: min(calc(100% - 48px), var(--site-max-width));
@@ -877,16 +841,32 @@
 }
 
 .cta {
-  width: min(calc(100% - 48px), var(--site-max-width));
-  max-width: var(--site-max-width);
-  margin: 0 auto;
-  padding: 100px 0;
   position: relative;
   z-index: 10;
+  overflow: hidden;
+    width: min(calc(100% - 48px), var(--site-max-width));
+  max-width: var(--site-max-width);
+  margin: 0 auto 100px;
+  border-radius: 10px;
+
+  .ctaVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
   .ctaCard {
-    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
-    border: 1px solid #333;
+    position: relative;
+    z-index: 2;
     border-radius: 20px;
     padding: 80px 40px;
     text-align: center;
@@ -898,13 +878,13 @@
     }
 
     p {
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       margin-bottom: 40px;
     }
 
     .ctaButton {
       background: transparent;
-      border: 1px solid rgba(255,255,255,0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       color: #fff;
       padding: 15px 40px;
       border-radius: 30px;
@@ -913,11 +893,12 @@
       transition: background 0.3s ease;
 
       &:hover {
-        background: rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.1);
       }
     }
   }
 }
+
 
 .footer {
   display: flex;

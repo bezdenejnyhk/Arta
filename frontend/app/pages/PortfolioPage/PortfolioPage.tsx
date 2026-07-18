@@ -11,6 +11,7 @@ import bubbleImg from '../../assets/bubble.png';
 import { useLang } from '~/hooks/useLang';
 import { useContactModal } from '~/hooks/useContactModal';
 import { Button } from '~/components/Button/Button';
+import video from '../../assets/videoCTA.mp4'
 
 const textAnimation = {
   hidden: { opacity: 0, y: 50 },
@@ -104,15 +105,17 @@ export function PortfolioPage(){
     <div className={styles.page}>
       {/* Фон с плавающими шариками */}
       <div className={styles.bubblesBackground}>
-        <Bubble src={bubbleImg} size={300} top="8%" left="33%" duration={6} />
+        <Bubble src={bubbleImg} size={300} top="2%" left="33%" duration={6} />
         <Bubble src={bubbleImg} size={80} top="0%" left="80%" duration={8} />
-        <Bubble src={bubbleImg} size={300} top="6%" left="73%" duration={6} />
+        <Bubble src={bubbleImg} size={300} top="3%" left="73%" duration={6} />
+        <Bubble src={bubbleImg} size={300} top="2%" left="88%" duration={6} />
+        <Bubble src={bubbleImg} size={300} top="0%" left="77%" duration={6} />
         <Bubble src={bubbleImg} size={120} top="5%" left="90%" duration={5} />
         <Bubble src={bubbleImg} size={400} top="12%" left="80%" duration={5} />
         <Bubble src={bubbleImg} size={200} top="69%" left="10%" duration={10} />
         <Bubble src={bubbleImg} size={500} top="60%" left="-10%" duration={10} />
         <Bubble src={bubbleImg} size={100} top="80%" left="75%" duration={7} />
-        <Bubble src={bubbleImg} size={500} top="5%" left="-10%" duration={7} />
+        <Bubble src={bubbleImg} size={500} top="2%" left="-10%" duration={7} />
         <Bubble src={bubbleImg} size={400} top="40%" left="95%" duration={7} />
         <Bubble src={bubbleImg} size={300} top="500%" left="55%" duration={7} />
       </div>
@@ -132,46 +135,6 @@ export function PortfolioPage(){
           </p>
         </motion.div>
       </section>
-
-      {/* Projects Section */}
-      {/* <section className={styles.projectsSection}>
-        <motion.h2 
-          initial="hidden" 
-          whileInView="visible" 
-          viewport={{ once: true }}
-          variants={textAnimation}
-        >
-          Наши недавние проекты
-        </motion.h2>
-        
-        <div className={styles.projectsStack}>
-          <ProjectCard 
-            title="Строительная фирма"
-            image={project1Img}
-            description="Сайт строительной компании. Запуск рекламной кампании, адаптивный дизайн для B2B-сегмента."
-            index={0}
-          />
-          <ProjectCard 
-            title="Гадания на таро"
-            image={project2Img}
-            description="Сайт-сервис «ZORNIK». Разработка структуры и акцентов на телефоне, внедрение платежей."
-            index={1}
-          />
-          <ProjectCard 
-            title="Криптобиржа"
-            image={project2Img}
-            description="Проект: Корпоративный сайт Finorbis Задача: Создать многостраничный сайт для 5 клиентских сегментов с акцентом на регуляторный статус, техническую документацию и юридическую чистоту.Решение: Разработка структуры из 30+ страниц, интеграция риск-дисклеймеров, API-документация, полный юридический блок (Privacy, Cookie, Disclaimer)
-Результат: Рост входящих заявок на 35%, повышение качества лидов, соответствие требованиям VQF/FINMA, единый тон коммуникации по всем страницам."
-            index={1}
-          />
-          <ProjectCard 
-            title="Гадания на таро"
-            image={project2Img}
-            description={}
-            index={1}
-          />
-        </div>
-      </section> */}
          <motion.section
          id="portfolio"
          className={styles.portfolio}
@@ -310,6 +273,22 @@ export function PortfolioPage(){
 
       {/* CTA Section */}
       <section className={styles.cta}>
+         <motion.div
+          className={styles.ctaVideo}
+    initial={{ opacity: 0, scale: 0.96 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.9, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <video
+            className={styles.video}
+            src={video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+        </motion.div>
         <motion.div 
           className={styles.ctaCard}
           initial="hidden" 
@@ -317,6 +296,7 @@ export function PortfolioPage(){
           viewport={{ once: true }}
           variants={textAnimation}
         >
+          
           <h2>Нужно решение под Вашу задачу?</h2>
           <p>Оставьте заявку и мы предложим стратегию разработки уже сегодня.</p>
           <motion.div
