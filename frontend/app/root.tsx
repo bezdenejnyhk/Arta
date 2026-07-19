@@ -19,6 +19,7 @@ import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { ModalForm } from "./components/ModalForm/ModalForm";
 import { BackgroundBubbles } from "./components/BackgroundBubbles/BackgroundBubbles";
+import { ParticleBackground } from "./components/ParticleBackground/ParticleBackground";
 import { ContactModalProvider, useContactModal } from "./hooks/useContactModal";
 
 export const links: Route.LinksFunction = () => [
@@ -81,6 +82,7 @@ function AppContent() {
 
   return (
     <div className="appWrapper">
+      <ParticleBackground />
       <BackgroundBubbles />
       <Header />
       <AnimatePresence mode="wait" initial={false}>
