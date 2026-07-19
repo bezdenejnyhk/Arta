@@ -323,7 +323,7 @@ export function PortfolioPage(){
         <div className={styles.contacts}>
           <div>
             <span>Email</span>
-            <a href="mailto:info@aptasystem">info@apta.system</a>
+            <a href="mailto:info@Arta.zona">info@Arta.zona</a>
           </div>
           <div>
             <span>Наш офис</span>

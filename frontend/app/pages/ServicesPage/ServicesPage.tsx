@@ -8,6 +8,7 @@ import img2 from '../../assets/images/services_2.png'
 import img3 from '../../assets/images/services_3.png'
 import img4 from '../../assets/images/services_4.png'
 import img5 from '../../assets/images/services_5.png'
+import img6 from '../../assets/images/services_6.jpg'
 import Bubble from '~/components/Bubble/Bubble';
 import bubbleImg from '../../assets/bubble.png'
 import video from '../../assets/videoCTA.mp4'
@@ -71,6 +72,7 @@ export function ServicesPage() {
     { id: '03', title: 'Интернет магазины', desc: 'Разработка интернет-магазинов, интеграция с 1С и складскими системами.', img: img3 },
     { id: '04', title: 'Личные кабинеты и B2B порталы', desc: 'Создаем решения для оптовых клиентов с привязкой, аналитикой и статусами заказов.', img: img4 },
     { id: '05', title: 'Десктоп-решения для Windows', desc: 'Desktop-решения для Windows с интеграцией в систему, фоновые программы, парсинг.', img: img5 },
+    { id: '06', title: 'Разработка ПО для спортсменов', desc: 'Разработка ПО для управления тренировками, медицинского мониторинга и спортивной статистики.', img: img6 },
   ];
 
   const highloadItems = [
@@ -232,7 +234,7 @@ export function ServicesPage() {
         <div className={styles.contacts}>
           <div>
             <span>Email</span>
-            <a href="mailto:info@aptasystem">info@apta.system</a>
+            <a href="mailto:info@Arta.zona">info@Arta.zona</a>
           </div>
           <div>
             <span>Наш офис</span>

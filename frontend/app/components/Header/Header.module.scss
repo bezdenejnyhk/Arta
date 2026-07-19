@@ -4,7 +4,7 @@
 // Desktop Header
 // ─────────────────────────────────────────
 .header {
-  position: absolute;
+    position: fixed;
   top: 0;
   left: 50%;
   z-index: 120;
@@ -12,6 +12,14 @@
   padding: 42px 0 0;
   background: transparent;
   transform: translateX(-50%);
+    backdrop-filter: blur(0px); // Для эффекта стекла
+
+  &.scrolled {
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 12px 32px;
+  }
 }
 
 .headerWrapper {

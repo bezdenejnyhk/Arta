@@ -38,9 +38,21 @@ export function Header() {
     };
   }, [mobileOpen]);
 
+    const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 50); // Если скролл > 50px
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <header className={styles.header} role="banner">
+      <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`} role="banner">
         <div className={styles.headerWrapper}>
           <NavLink to="/">
             <img alt="Logo" src={logo} className={styles.logo}></img>

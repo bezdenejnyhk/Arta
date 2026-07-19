@@ -117,19 +117,6 @@ export function HomePage() {
         </motion.div>
       </motion.section>
 
-      <motion.section
-          className={styles.marqueeSection}
-          aria-labelledby="marquee-title"
-          initial={{ opacity: 0, y: 32 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className={styles.marqueeTop}>
-            <MarqueeRow />
-          </div>
-      </motion.section>
-
         <motion.section
           className={styles.servicesSection}
           aria-labelledby="services-title"
@@ -231,7 +218,7 @@ export function HomePage() {
         <div className={styles.contacts}>
           <div>
             <span>Email</span>
-            <a href="mailto:info@aptasystem">info@apta.system</a>
+            <a href="mailto:info@Arta.zona">info@Arta.zona</a>
           </div>
           <div>
             <span>Наш офис</span>
