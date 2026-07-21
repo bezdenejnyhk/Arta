@@ -19,6 +19,6 @@
 
 @media (max-width: 900px) {
     .liquidPlanet {
-        width: min(78vw, 620px);
+        width: min(110vw, 620px);
     }
 }

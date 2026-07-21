@@ -29,7 +29,7 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background:var(--cl-background);
+  background: var(--cl-background);
 }
 
 .title {
@@ -99,8 +99,6 @@
   padding-top: 88px;
 }
 
-
-
 .about {
   width: min(calc(100% - 48px), var(--site-max-width));
   max-width: var(--site-max-width);
@@ -140,14 +138,9 @@
 .container {
   max-width: var(--site-max-width);
   width: min(calc(100% - 48px), var(--site-max-width));
-  margin: 0 auto;
+  margin: 70px auto;
   padding: 0;
   display: grid;
-  min-height: 710px;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: min(100%, 1130px) auto;
-  background-image: url('../../assets/images/Group\ 1000000752.png');
 
   @include responsive(fullscreen) {
     gap: 60px;
@@ -222,6 +215,7 @@
 
   @include responsive(tablet) {
     gap: 40px;
+    flex-direction: column;
   }
 
   @include responsive(phone) {
@@ -548,7 +542,6 @@
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 .marqueeRow {
@@ -581,6 +574,7 @@
   text-align: center;
   margin: 230px auto;
   position: relative;
+  gap: 20px;
 }
 
 .marqueeImg {
@@ -619,9 +613,7 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: 1.2px;
-  transition:
-    color 0.2s ease,
-    border-color 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease;
   @media (hover: hover) {
     &:hover {
       color: var(--cl-main);
@@ -1154,6 +1146,7 @@
 
   .featuresSection {
     padding: 28px 16px 64px;
+    flex-direction: column;
   }
 
   .featuresShell {
@@ -1960,7 +1953,6 @@
   }
 
   &:hover {
-
     svg {
       transform: translateX(4px);
     }
@@ -2001,12 +1993,6 @@
     border-radius: 20px;
     padding: 80px 40px;
     text-align: center;
-
-    h2 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-bottom: 20px;
-    }
 
     p {
       color: rgba(255, 255, 255, 0.6);
@@ -2051,10 +2037,14 @@
       margin-bottom: 5px;
     }
 
-    a, p {
+    a,
+    p {
       color: #ffffff;
       text-decoration: none;
       font-size: 14px;
     }
+  }
+  @include responsive(tablet) {
+    flex-direction: column;
   }
 }

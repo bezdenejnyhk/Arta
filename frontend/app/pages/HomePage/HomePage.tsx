@@ -143,9 +143,17 @@ export function HomePage() {
               </h2>
               <LiquidPlanet />
               {/* <img src={marqueImg} alt="img" className={styles.marqueeImg}/> */}
-              <button type="button" className={styles.marqueeCta} onClick={openModal}>
-                {home.marquee.cta}
-              </button>
+              
+            <Button
+                theme="white"
+                className={styles.mobileCta}
+                onClick={() => {
+                  setMobileOpen(false);
+                  openModal();
+                }}
+              >
+                Стать клиентом
+              </Button>
             </div>
           </div>
         </motion.section>

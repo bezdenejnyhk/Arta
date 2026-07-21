@@ -1,7 +1,8 @@
+@use "../../styles/responsive" as *;
 // Переменные
 $bg-color: #030303;
 $text-primary: #ffffff;
-$text-secondary: #888888;
+$text-secondary: #ffffff;
 $accent-color: #0F3B5E;
 $border-color: #1e1e1e;
 $card-bg: #0a0a0c;
@@ -99,6 +100,11 @@ $card-bg: #0a0a0c;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
   gap: 20px;
+
+  @include responsive(phone) {
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      justify-content: center;
+  }
 }
 
 .card {
@@ -184,15 +190,19 @@ $card-bg: #0a0a0c;
     h4 {
       font-weight: 400;
       font-size: 18px;
-      width: 30%;
+      width: 40%;
     }
 
     p {
       color: $text-secondary;
       font-size: 14px;
       line-height: 1.6;
-      width: 60%;
+      width: 100%;
     }
+
+      @include responsive(phone) {
+      flex-direction: column;
+  }
   }
 }
 
@@ -282,5 +292,8 @@ $card-bg: #0a0a0c;
       text-decoration: none;
       font-size: 14px;
     }
+  }
+      @include responsive(tablet) {
+    flex-direction: column;
   }
 }
