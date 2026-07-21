@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import styles from "./BottomSection.module.scss";
+import { MatrixText } from "../MatrixText/MatrixText";
 
 interface BottomSectionProps {
-  title: React.ReactNode;
+  title: string;
   subtitle: string;
   items: {
     id: number;
@@ -21,7 +22,9 @@ export function BottomSection({ title, subtitle, items }: BottomSectionProps) {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className={styles.backendWrapper}>
-        <h2 className={styles.backendTitle}>{title}</h2>
+        <h2 className={styles.backendTitle}>
+          <MatrixText text={title} />
+        </h2>
         <p className={styles.backendText}>{subtitle}</p>
 
         <motion.ul

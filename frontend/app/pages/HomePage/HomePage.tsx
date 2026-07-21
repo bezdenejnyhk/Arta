@@ -9,6 +9,7 @@ import Services from "~/components/Services/Services";
 import Expertise from "~/components/Expertise/Expertise";
 import { Button } from "~/components/Button/Button";
 import { LiquidPlanet } from "~/components/Rtut/LiquidPlanet";
+import { MatrixText } from "~/components/MatrixText/MatrixText";
 import video from '../../assets/videoCTA.mp4'
  
 function MarqueeRow({ reverse = false }: { reverse?: boolean }) {
@@ -72,7 +73,7 @@ export function HomePage() {
 
         <div className={styles.about}>
           <h2 id="company-platform-title" className={styles.aboutTitle}>
-            {home.about.title}
+            <MatrixText text={home.about.title} />
           </h2>
         </div>
       </motion.section>

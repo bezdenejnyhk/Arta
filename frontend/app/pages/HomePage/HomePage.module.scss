@@ -389,9 +389,9 @@
 .servicesSection {
   position: relative;
   overflow: hidden;
-  background: var(--cl-background);
   padding: 0 var(--site-padding);
   margin-top: 200px;
+  z-index: 2;
 }
 
 .servicesInner {
