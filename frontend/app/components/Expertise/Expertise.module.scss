@@ -18,6 +18,7 @@ $number-text: #fff;
   color: $text-primary;
   font-family: -apple-system, BlinkMacSystemFont, "Source Serif Pro", Roboto,
     Helvetica, Arial, sans-serif;
+  overflow: hidden;
 }
 
 .container {
@@ -60,6 +61,7 @@ $number-text: #fff;
   flex-direction: column;
   gap: 20px;
   flex: 1;
+  z-index: 2;
 }
 
 .rightBottomRow {
