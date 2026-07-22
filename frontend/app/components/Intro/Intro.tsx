@@ -5,6 +5,7 @@ import { Button } from "../Button/Button";
 import { useState } from "react";
 import { useContactModal } from "~/hooks/useContactModal";
 import { useLang } from "~/hooks/useLang";
+import { MatrixText } from "../MatrixText/MatrixText";
 import video from '../../assets/videoLoop.mp4'
 
 export function Intro({
@@ -37,7 +38,7 @@ export function Intro({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.12 }}
           >
-            {title}
+            <MatrixText text={title} duration={900} delay={180} />
           </motion.h1>
           <motion.div
             className={styles.content}

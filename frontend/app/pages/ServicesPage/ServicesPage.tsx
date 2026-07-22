@@ -13,6 +13,7 @@ import Bubble from '~/components/Bubble/Bubble';
 import bubbleImg from '../../assets/bubble.png'
 import video from '../../assets/videoCTA.mp4'
 import videoStar from '../../assets/videoLoop.mp4'
+import { MatrixText } from '~/components/MatrixText/MatrixText';
 
 interface BubbleProps {
   size: number;
@@ -101,7 +102,9 @@ export function ServicesPage() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <FadeInScroll>
-          <h1 className={styles.heroTitle}>УСЛУГИ</h1>
+          <h1 className={styles.heroTitle}>
+            <MatrixText text="УСЛУГИ" duration={950} />
+          </h1>
           <p className={styles.heroSubtitle}>
             Разрабатываем решения любой сложности — от быстрого лендинга до высоконагруженных экосистем. Находим направление, которое решит вашу задачу.
           </p>
@@ -137,7 +140,9 @@ export function ServicesPage() {
       {/* Веб-разработка Section */}
       <section className={styles.section}>
         <FadeInScroll>
-          <h2 className={styles.sectionTitle}>Веб-разработка</h2>
+          <h2 className={styles.sectionTitle}>
+            <MatrixText text="Веб-разработка" />
+          </h2>
           <p className={styles.sectionSubtitle}>
             Инструменты для вашего роста и онлайн-присутствия. Создаем сайты, которые продают.
           </p>
@@ -170,7 +175,9 @@ export function ServicesPage() {
       {/* Highload Section */}
       <section className={styles.section}>
         <FadeInScroll>
-          <h2 className={styles.sectionTitle}>Highload, бэкенд и <br/> инфраструктура</h2>
+          <h2 className={styles.sectionTitle}>
+            <MatrixText text={'Highload, бэкенд и\nинфраструктура'} />
+          </h2>
           <p className={styles.sectionSubtitle}>
             Сервисы высокопроизводительных серверов.
           </p>

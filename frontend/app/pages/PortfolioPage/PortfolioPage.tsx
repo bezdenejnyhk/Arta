@@ -1,5 +1,6 @@
 import { useRef, useState, type CSSProperties } from 'react';
 import { motion, useScroll, useTransform, type MotionValue, type Variants } from 'framer-motion';
+import { MatrixText } from '~/components/MatrixText/MatrixText';
 import styles from './PortfolioPage.module.scss';
 import Bubble from '../../components/Bubble/Bubble';
 import projectBuildova from "../../assets/images/project_1.png";
@@ -129,7 +130,9 @@ export function PortfolioPage(){
           viewport={{ once: true, margin: "-100px" }}
           variants={textAnimation}
         >
-          <h1 className={styles.title}>ПОРТФОЛИО</h1>
+          <h1 className={styles.title}>
+            <MatrixText text="ПОРТФОЛИО" duration={950} />
+          </h1>
           <p className={styles.subtitle}>
             Реальные примеры разработки сайтов, приложений и CRM-систем.<br/>
             Результаты автоматизации и роста бизнеса.
@@ -163,8 +166,7 @@ export function PortfolioPage(){
          <div className={styles.portfolioWrapper}>
            <div className={styles.portfolioHeader}>
              <h2 className={styles.portfolioTitle}>
-               {portfolioContent.heading.titleLines[0]}
-               <br /> {portfolioContent.heading.titleLines[1]}
+               <MatrixText text={portfolioContent.heading.titleLines.join('\n')} />
              </h2>
              <p className={styles.portfolioSubtitle}>{portfolioContent.heading.subtitle}</p>
           </div>
@@ -227,7 +229,7 @@ export function PortfolioPage(){
           viewport={{ once: true }}
           variants={textAnimation}
         >
-          Отзывы наших клиентов
+          <MatrixText text="Отзывы наших клиентов" />
         </motion.h2>
         <section>
         <div className={styles.topReviewWrapper}>
