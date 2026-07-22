@@ -4,18 +4,18 @@
   position: relative;
   overflow: hidden;
   background-color: var(--cl-background);
+  min-height: 100vh; // Добавляем минимальную высоту для скролла
 }
 
 .introWrapper {
   position: relative;
   z-index: 4;
   display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 1fr);
+  grid-template-columns: 1fr;
   align-items: center;
-  gap: clamp(48px, 7vw, 112px);
   width: min(calc(100% - 48px), var(--site-max-width));
   max-width: var(--site-max-width);
-  min-height: 760px;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 154px 0 104px;
 }
@@ -25,6 +25,9 @@
   flex-direction: column;
   align-items: flex-start;
   min-width: 0;
+  max-width: 55%;
+  position: relative;
+  z-index: 5;
 }
 
 .title {
@@ -59,12 +62,16 @@
 }
 
 .videoWrap {
-  position: relative;
-  justify-self: end;
-  width: min(100%, 600px);
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
+  width: min(400px, 35vw);
   aspect-ratio: 1;
   overflow: hidden;
   pointer-events: none;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .video {
@@ -75,46 +82,50 @@
   opacity: 0.74;
   mix-blend-mode: screen;
   filter: contrast(1.08) brightness(0.95);
+  background: var(--cl-background);
 }
 
 @include responsive(fullscreen) {
   .introWrapper {
-    min-height: 720px;
+    min-height: 100vh;
   }
+  
 }
 
 @include responsive(screen) {
-  .introWrapper {
-    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
-    gap: 48px;
-    min-height: 660px;
+  .copy {
+    max-width: 50%;
   }
-
+  
   .subtitle {
     font-size: 15px;
   }
+  
+
 }
 
 @include responsive(tablet) {
   .introWrapper {
-    grid-template-columns: 1fr;
     width: 100%;
-    min-height: auto;
+    min-height: 100vh;
     padding: 130px var(--site-padding) 72px;
   }
-
-  .videoWrap {
-    order: -1;
-    justify-self: center;
-    width: min(78vw, 420px);
-    margin-bottom: 4px;
+  
+  .copy {
+    max-width: 65%;
   }
+ 
 }
 
 @include responsive(phone) {
   .introWrapper {
     padding: 112px 20px 56px;
     gap: 28px;
+    min-height: 100vh;
+  }
+  
+  .copy {
+    max-width: 100%;
   }
 
   .title {
@@ -134,4 +145,5 @@
   .mobileCta {
     margin-top: 28px;
   }
+
 }

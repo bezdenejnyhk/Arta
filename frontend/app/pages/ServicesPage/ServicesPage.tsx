@@ -12,6 +12,7 @@ import img6 from '../../assets/images/services_6.jpg'
 import Bubble from '~/components/Bubble/Bubble';
 import bubbleImg from '../../assets/bubble.png'
 import video from '../../assets/videoCTA.mp4'
+import videoStar from '../../assets/videoLoop.mp4'
 
 interface BubbleProps {
   size: number;
@@ -114,6 +115,22 @@ export function ServicesPage() {
               >
                 Стать клиентом
               </Button>
+               <motion.div
+          className={styles.videoWrap}
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 0.5, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <video
+            className={styles.video}
+            src={videoStar}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+        </motion.div>
         </FadeInScroll>
       </section>
 

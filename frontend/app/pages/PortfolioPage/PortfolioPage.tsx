@@ -12,6 +12,7 @@ import { useLang } from '~/hooks/useLang';
 import { useContactModal } from '~/hooks/useContactModal';
 import { Button } from '~/components/Button/Button';
 import video from '../../assets/videoCTA.mp4'
+import videoStar from '../../assets/videoLoop.mp4'
 
 const textAnimation = {
   hidden: { opacity: 0, y: 50 },
@@ -133,6 +134,22 @@ export function PortfolioPage(){
             Реальные примеры разработки сайтов, приложений и CRM-систем.<br/>
             Результаты автоматизации и роста бизнеса.
           </p>
+        </motion.div>
+         <motion.div
+          className={styles.videoWrap}
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 0.5, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <video
+            className={styles.video}
+            src={videoStar}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
         </motion.div>
       </section>
          <motion.section
