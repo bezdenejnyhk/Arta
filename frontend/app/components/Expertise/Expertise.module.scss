@@ -1,8 +1,8 @@
 // ─────────────────────────────────────────────
 // Переменные
 // ─────────────────────────────────────────────
-$bg-color: #030303;
-$card-bg: #030303;
+$bg-color: #020202;
+$card-bg: #020202;
 $card-blue: #0F3B5E;
 $border-color: #0F3B5E;
 $text-primary: #ffffff;
@@ -49,6 +49,8 @@ $number-text: #fff;
 .gridContainer {
   display: flex;
   gap: 20px;
+  position: relative;
+  z-index: 5;
 
   @media (max-width: 900px) {
     flex-direction: column;

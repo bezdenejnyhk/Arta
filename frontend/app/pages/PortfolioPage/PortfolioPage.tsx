@@ -141,7 +141,7 @@ export function PortfolioPage(){
          <motion.div
           className={styles.videoWrap}
           initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 0.5, scale: 1 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
         >
           <video

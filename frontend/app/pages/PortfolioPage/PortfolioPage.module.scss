@@ -1,8 +1,9 @@
 @use "../../styles/responsive" as *;
 
 .portfolio {
-  background: var(--cl-background);
   color: var(--cl-white);
+  position: relative;
+  z-index: 5;
 }
 
 .portfolioWrapper {
@@ -118,6 +119,8 @@
   width: min(calc(100% - 48px), var(--site-max-width));
   margin: 200px auto;
   padding: 0;
+  position: relative;
+  z-index: 5;
 }
 
 .reviewsWrapper {
@@ -713,7 +716,7 @@
 }
 
 .page {
-  background-color: #050505;
+  background-color: #020202;
   color: #ffffff;
   font-family: 'Arial', sans-serif; // Замените на нужный шрифт
   overflow-x: clip;
@@ -739,15 +742,15 @@
   flex-direction: column;
   justify-content: center;
   padding: 0;
-  position: relative;
-  z-index: 10;
+  
 
   .title {
-    font-size: 64px;
+    font-size: 41px;
     font-weight: 300;
-    letter-spacing: 5px;
     margin-bottom: 20px;
     word-break: break-all;
+    position: relative;
+    z-index: 5;
   }
 
   .subtitle {
@@ -755,6 +758,8 @@
     color: rgba(255,255,255,0.6);
     line-height: 1.5;
     max-width: 500px;
+     position: relative;
+    z-index: 5;
   }
 }
 
@@ -938,13 +943,12 @@
   position: fixed;
   top: 70px;
   right: 20px;
-  z-index: 1000;
+  z-index: 0;
   width: min(400px, 35vw);
   aspect-ratio: 1;
   overflow: hidden;
   pointer-events: none;
   border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   }
 
 .video {
@@ -952,9 +956,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0.74;
-  mix-blend-mode: screen;
-  opacity: 0.7;
+   mix-blend-mode: multiply;
   filter: contrast(1.08) brightness(0.95);
-  background: var(--cl-background);
+  background: rgba(2,2,2,0);
 }

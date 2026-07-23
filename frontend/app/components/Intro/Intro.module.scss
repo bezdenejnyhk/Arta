@@ -65,7 +65,7 @@
   position: fixed;
   top: 70px;
   right: 20px;
-  z-index: 1000;
+  z-index: -1;
   width: min(400px, 35vw);
   aspect-ratio: 1;
   overflow: hidden;
@@ -79,10 +79,9 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0.74;
-  mix-blend-mode: screen;
+   mix-blend-mode: multiply;
   filter: contrast(1.08) brightness(0.95);
-  background: var(--cl-background);
+  background: rgba(2,2,2,0);
 }
 
 @include responsive(fullscreen) {

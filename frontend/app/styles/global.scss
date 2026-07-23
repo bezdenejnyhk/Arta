@@ -4,8 +4,8 @@
   --font-family-main: "Source Serif Pro", "Montserrat", sans-serif;
   --modal-z-index: 10;
   --cl-white: #FFFFFF;
-  --cl-background: #030303;
-  --cl-black: #030303;
+  --cl-background: #020202;
+  --cl-black: #020202;
   --cl-black-2: #121212;
   --cl-main: #0F3B5E;
   --cl-main-dark: #216CA7;
@@ -51,6 +51,8 @@ h2 {
   text-transform: uppercase;
   color: var(--cl-white);
   line-height: 1.2;
+    position: relative;
+  z-index: 5;
 }
 
 @include responsive(fullscreen) {

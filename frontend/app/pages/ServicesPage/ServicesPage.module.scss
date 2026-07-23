@@ -1,6 +1,6 @@
 @use "../../styles/responsive" as *;
 // Переменные
-$bg-color: #030303;
+$bg-color: #020202;
 $text-primary: #ffffff;
 $text-secondary: #ffffff;
 $accent-color: #0F3B5E;
@@ -34,7 +34,7 @@ $card-bg: #0a0a0c;
 .section {
   padding: 80px 0;
   position: relative;
-  z-index: 3;
+  z-index: 5;
     width: min(calc(100% - 48px), var(--site-max-width));
   max-width: var(--site-max-width);
   margin: 0 auto;
@@ -45,6 +45,8 @@ $card-bg: #0a0a0c;
   font-weight: 400;
   margin-bottom: 15px;
   letter-spacing: 1px;
+  position: relative;
+  z-index: 5;
 }
 
 .sectionSubtitle {
@@ -53,6 +55,8 @@ $card-bg: #0a0a0c;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 50px;
+  position: relative;
+    z-index: 5;
 }
 
 // Hero
@@ -61,8 +65,6 @@ $card-bg: #0a0a0c;
   flex-direction: column;
   justify-content: center;
   height: 60vh;
-  position: relative;
-  z-index: 10;
       width: min(calc(100% - 48px), var(--site-max-width));
   max-width: var(--site-max-width);
   margin: 0 auto;
@@ -72,6 +74,8 @@ $card-bg: #0a0a0c;
     font-weight: 300;
     margin-bottom: 20px;
     letter-spacing: 4px;
+      position: relative;
+  z-index: 5;
   }
 
   .heroSubtitle {
@@ -79,6 +83,8 @@ $card-bg: #0a0a0c;
     max-width: 500px;
     line-height: 1.6;
     margin-bottom: 40px;
+      position: relative;
+  z-index: 5;
   }
 }
 
@@ -93,6 +99,8 @@ $card-bg: #0a0a0c;
   display: flex;
   align-items: center;
   gap: 10px;
+    position: relative;
+  z-index: 5;
 }
 
 // Grid Карточки
@@ -173,6 +181,8 @@ $card-bg: #0a0a0c;
   padding: 30px 0;
   border-bottom: 1px solid $border-color;
   transition: background 0.3s ease;
+  position: relative;
+  z-index: 5;
 
   .listNumber {
     color: $text-secondary;
@@ -302,7 +312,7 @@ $card-bg: #0a0a0c;
   position: fixed;
  top: 70px;
   right: 20px;
-  z-index: 1000;
+  z-index: 0;
   width: min(400px, 35vw);
   aspect-ratio: 1;
   overflow: hidden;
@@ -316,9 +326,7 @@ $card-bg: #0a0a0c;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0.74;
-  mix-blend-mode: screen;
-  opacity: 0.7;
+   mix-blend-mode: multiply;
   filter: contrast(1.08) brightness(0.95);
-  background: var(--cl-background);
+  background: rgba(2,2,2,0);
 }
