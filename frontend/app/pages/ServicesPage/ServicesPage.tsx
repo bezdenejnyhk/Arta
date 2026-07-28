@@ -89,8 +89,7 @@ export function ServicesPage() {
       {/* Шарики на фоне */}
               <Bubble src={bubbleImg} size={300} top="8%" left="33%" duration={6} />
         <Bubble src={bubbleImg} size={80} top="0%" left="80%" duration={8} />
-        <Bubble src={bubbleImg} size={300} top="6%" left="73%" duration={6} />
-        <Bubble src={bubbleImg} size={120} top="5%" left="90%" duration={5} />
+        <Bubble src={bubbleImg} size={300} top="18%" left="75%" duration={6} />
         <Bubble src={bubbleImg} size={400} top="12%" left="80%" duration={5} />
         <Bubble src={bubbleImg} size={200} top="69%" left="10%" duration={10} />
         <Bubble src={bubbleImg} size={500} top="60%" left="-10%" duration={10} />
@@ -231,7 +230,7 @@ export function ServicesPage() {
           variants={textAnimation}
         >
           
-          <h2>Нужно решение под Вашу задачу?</h2>
+          <h3 className={styles.ctaCard_title}>Нужно решение под Вашу задачу?</h3>
           <p>Оставьте заявку и мы предложим стратегию разработки уже сегодня.</p>
           <motion.div
             whileHover={{ scale: 1.03, y: -4 }}

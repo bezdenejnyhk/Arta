@@ -110,8 +110,8 @@ export function PortfolioPage(){
         <Bubble src={bubbleImg} size={300} top="2%" left="33%" duration={6} />
         <Bubble src={bubbleImg} size={80} top="0%" left="80%" duration={8} />
         <Bubble src={bubbleImg} size={300} top="3%" left="73%" duration={6} />
-        <Bubble src={bubbleImg} size={300} top="2%" left="88%" duration={6} />
-        <Bubble src={bubbleImg} size={300} top="0%" left="77%" duration={6} />
+        <Bubble src={bubbleImg} size={300} top="5%" left="88%" duration={6} />
+        <Bubble src={bubbleImg} size={300} top="6%" left="72%" duration={6} />
         <Bubble src={bubbleImg} size={120} top="5%" left="90%" duration={5} />
         <Bubble src={bubbleImg} size={400} top="12%" left="80%" duration={5} />
         <Bubble src={bubbleImg} size={200} top="69%" left="10%" duration={10} />
@@ -316,7 +316,7 @@ export function PortfolioPage(){
           variants={textAnimation}
         >
           
-          <h2>Нужно решение под Вашу задачу?</h2>
+          <h3 className={styles.ctaCard_title}>Нужно решение под Вашу задачу?</h3>
           <p>Оставьте заявку и мы предложим стратегию разработки уже сегодня.</p>
           <motion.div
             whileHover={{ scale: 1.03, y: -4 }}

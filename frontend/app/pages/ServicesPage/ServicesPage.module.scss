@@ -239,6 +239,7 @@ $card-bg: #0a0a0c;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: brightness(0.5); 
     }
   }
 
@@ -249,15 +250,24 @@ $card-bg: #0a0a0c;
     padding: 80px 40px;
     text-align: center;
 
-    h2 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-bottom: 20px;
+    &_title {
+      margin: 0;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 0.94;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--cl-white);
+    line-height: 1.2;
+    position: relative;
+    z-index: 5;
     }
 
     p {
       color: rgba(255, 255, 255, 0.6);
       margin-bottom: 40px;
+      margin-top: 20px;
     }
 
     .ctaButton {

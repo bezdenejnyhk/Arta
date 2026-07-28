@@ -201,7 +201,7 @@ export function HomePage() {
           variants={textAnimation}
         >
           
-          <h2>Нужно решение под Вашу задачу?</h2>
+          <h3 className={styles.ctaCard_title}>Нужно решение под Вашу задачу?</h3>
           <p>Оставьте заявку и мы предложим стратегию разработки уже сегодня.</p>
           <motion.div
             whileHover={{ scale: 1.03, y: -4 }}

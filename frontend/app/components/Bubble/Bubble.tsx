@@ -13,7 +13,8 @@ const Bubble = ({ src, size, top, left, duration }: { src:string, size:number, t
         top: top,
         left: left,
         objectFit: 'contain',
-        filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.1))'
+        filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.1))',
+        zIndex: '5'
       }}
       // Плавное движение вверх-вниз и вправо-влево
       animate={{
