@@ -45,19 +45,42 @@ function ReviewDealCard({
   total: number;
   scrollYProgress: MotionValue<number>;
 }) {
-  const segment = 1 / Math.max(total, 1);
-  const start = index * segment;
+  const isLast = index === total - 1;
+  const movingCardCount = Math.max(total - 1, 1);
+  const animationIndex = Math.min(index, movingCardCount - 1);
+  const segment = 1 / movingCardCount;
+  const start = animationIndex * segment;
   const hold = Math.min(start + segment * 0.38, 0.94);
   const end = Math.min(start + segment * 0.92, 1);
   const gone = Math.min(end + 0.08, 1);
-  const baseRotate = (index - (total - 1) / 2) * 2.2;
-  const baseY = (index - (total - 1) / 2) * 7;
+  const baseRotate = isLast ? 0 : (index - (total - 1) / 2) * 2.2;
+  const baseY = isLast ? 0 : (index - (total - 1) / 2) * 7;
 
-  const x = useTransform(scrollYProgress, [start, hold, end], ["0vw", "0vw", "88vw"]);
-  const y = useTransform(scrollYProgress, [start, hold, end], [baseY, baseY - 8, baseY + 34]);
-  const rotate = useTransform(scrollYProgress, [start, hold, end], [baseRotate, baseRotate, 24 + index * 4]);
-  const scale = useTransform(scrollYProgress, [start, hold, end], [1, 1, 0.94]);
-  const opacity = useTransform(scrollYProgress, [start, end, gone], [1, 1, 0]);
+  const x = useTransform(
+    scrollYProgress,
+    [start, hold, end],
+    isLast ? ["0vw", "0vw", "0vw"] : ["0vw", "0vw", "88vw"],
+  );
+  const y = useTransform(
+    scrollYProgress,
+    [start, hold, end],
+    isLast ? [0, 0, 0] : [baseY, baseY - 8, baseY + 34],
+  );
+  const rotate = useTransform(
+    scrollYProgress,
+    [start, hold, end],
+    isLast ? [0, 0, 0] : [baseRotate, baseRotate, 24 + index * 4],
+  );
+  const scale = useTransform(
+    scrollYProgress,
+    [start, hold, end],
+    isLast ? [1, 1, 1] : [1, 1, 0.94],
+  );
+  const opacity = useTransform(
+    scrollYProgress,
+    [start, end, gone],
+    isLast ? [1, 1, 1] : [1, 1, 0],
+  );
 
   return (
     <motion.div
